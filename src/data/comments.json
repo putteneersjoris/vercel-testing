@@ -1,6 +1,12 @@
 {
   "comments": [
     {
+      "text": "Here's a link <a href=\"https://example.com\">with an image</a> and <img src=\"x.jpg\"> inside",
+      "timestamp": "2024-11-11T15:16:48.545Z",
+      "location": "Bangkok, Thailand",
+      "ip": "49.230.xxx.xxx"
+    },
+    {
       "text": "<a href=\"https://example.com\">Click me</a> <a href=\"javascript:alert('clicked')\">Malicious link</a>",
       "timestamp": "2024-11-11T15:16:25.371Z",
       "location": "Bangkok, Thailand",
