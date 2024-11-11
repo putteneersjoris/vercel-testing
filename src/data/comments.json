@@ -1,6 +1,12 @@
 {
   "comments": [
     {
+      "text": "// program to convert date to number // create date const d1 = new Date(); console.log(d1);  // converting to number const result = d1.getTime(); console.log(result);",
+      "timestamp": "2024-11-11T17:17:56.203Z",
+      "location": "Bangkok, Thailand",
+      "ip": "49.230.xxx.xxx"
+    },
+    {
       "text": "<!DOCTYPE html> <html> <body>  <h1>My First Heading</h1>  <p>My first paragraph.</p>  </body> </html>",
       "timestamp": "2024-11-11T17:17:02.686Z",
       "location": "Bangkok, Thailand",
