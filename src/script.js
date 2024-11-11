@@ -17,17 +17,23 @@ async function submitComment() {
     const input = document.getElementById('commentInput');
     const comment = input.value;
     
-    if (!comment.trim()) return; // Don't submit empty comments
+    if (!comment.trim()) return;
 
     try {
-        const response = await fetch('https://vercel-testing-8k66qiqao-putteneersjoris-projects.vercel.app/api/add-comment', {
+        const response = await fetch('/api/add-comment', {
             method: 'POST',
             body: JSON.stringify({ comment: comment }),
             headers: {
                 'Content-Type': 'application/json',
             }
         });
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
         const data = await response.json();
+        console.log('Server response:', data);
         
         // Add comment to local array
         comments.unshift({
@@ -43,6 +49,7 @@ async function submitComment() {
         
     } catch (error) {
         console.error('Error:', error);
+        alert('Failed to submit comment. Please try again.');
     }
 }
 
