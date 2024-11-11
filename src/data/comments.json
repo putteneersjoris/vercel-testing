@@ -1,6 +1,12 @@
 {
   "comments": [
     {
+      "text": "yes sit ",
+      "timestamp": "2024-11-11T15:09:22.682Z",
+      "location": "Bangkok, Thailand",
+      "ip": "49.230.xxx.xxx"
+    },
+    {
       "text": "javascript:alert('xss')",
       "timestamp": "2024-11-11T14:42:12.485Z"
     },
