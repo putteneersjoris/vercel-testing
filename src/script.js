@@ -45,3 +45,27 @@ async function submitComment() {
         console.error('Error:', error);
     }
 }
+
+async function loadComments() {
+    try {
+        const response = await fetch('https://raw.githubusercontent.com/putteneersjoris/vercel-testing/main/src/data/comments.json');
+        const data = await response.json();
+        comments = data.comments;
+        displayComments();
+    } catch (error) {
+        console.error('Error loading comments:', error);
+    }
+}
+
+// Load comments when page loads
+document.addEventListener('DOMContentLoaded', loadComments);
+
+
+
+
+
+
+
+
+
+
