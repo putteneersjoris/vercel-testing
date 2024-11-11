@@ -1,17 +1,22 @@
 let comments = [];
 const VERCEL_API_URL = 'https://vercel-testing-git-main-putteneersjoris-projects.vercel.app/api/add-comment';
 
+
 function displayComments() {
     const container = document.getElementById('commentsContainer');
     container.innerHTML = comments
         .map(comment => `
             <div class="comment">
                 <p>${comment.text}</p>
-                <small>${new Date(comment.timestamp).toLocaleString()}</small>
+                <small>
+                    Posted on: ${new Date(comment.timestamp).toLocaleString()}
+                    ${comment.location ? `<br>From: ${comment.location}` : ''}
+                </small>
             </div>
         `)
         .join('');
 }
+
 
 async function submitComment() {
     const input = document.getElementById('commentInput');

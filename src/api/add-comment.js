@@ -14,30 +14,43 @@ export default async function handler(request, response) {
     if (request.method === 'POST') {
         try {
             const { comment } = request.body;
-            console.log('Received comment:', comment);
+            
+            // Get IP from Vercel request
+            const ip = request.headers['x-forwarded-for'] || request.socket.remoteAddress;
+            
+            // Get location from IP (using free IP API)
+            let location = 'Unknown';
+            try {
+                const ipResponse = await fetch(`http://ip-api.com/json/${ip}`);
+                const ipData = await ipResponse.json();
+                if (ipData.status === 'success') {
+                    location = `${ipData.city}, ${ipData.country}`;
+                }
+            } catch (error) {
+                console.error('Error getting location:', error);
+            }
 
-            // Initialize Octokit with your GitHub token
             const octokit = new Octokit({
                 auth: process.env.GITHUB_TOKEN
             });
 
-            // Get current comments file
             const { data: fileData } = await octokit.repos.getContent({
                 owner: 'putteneersjoris',
                 repo: 'vercel-testing',
                 path: 'src/data/comments.json'
             });
 
-            // Decode and parse current comments
             const currentContent = JSON.parse(Buffer.from(fileData.content, 'base64').toString());
             
-            // Add new comment
+            // Add new comment with IP and location
             currentContent.comments.unshift({
                 text: comment,
-                timestamp: new Date().toISOString()
+                timestamp: new Date().toISOString(),
+                location: location,
+                // Only store partial IP for privacy
+                ip: ip.split('.').slice(0, 2).join('.') + '.xxx.xxx'
             });
 
-            // Update file in repository
             await octokit.repos.createOrUpdateFileContents({
                 owner: 'putteneersjoris',
                 repo: 'vercel-testing',
@@ -49,7 +62,8 @@ export default async function handler(request, response) {
 
             return response.status(200).json({ 
                 message: 'Comment added successfully',
-                comment: comment
+                comment: comment,
+                location: location
             });
         } catch (error) {
             console.error('Error:', error);
