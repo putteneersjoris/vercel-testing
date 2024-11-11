@@ -1,6 +1,10 @@
 {
   "comments": [
     {
+      "text": "javascript:alert('xss')",
+      "timestamp": "2024-11-11T14:42:12.485Z"
+    },
+    {
       "text": "\" \" \"\" \"     \" \"\\n\\n\\n\"",
       "timestamp": "2024-11-11T14:41:12.409Z"
     },
