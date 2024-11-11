@@ -1,16 +1,5 @@
 let comments = [];
-
-
-async function loadComments() {
-    try {
-        const response = await fetch('https://raw.githubusercontent.com/putteneersjoris/vercel-testing/main/src/data/comments.json');
-        const data = await response.json();
-        comments = data.comments;
-        displayComments();
-    } catch (error) {
-        console.error('Error loading comments:', error);
-    }
-}
+const VERCEL_API_URL = 'https://vercel-testing-git-main-putteneersjoris-projects.vercel.app/api/add-comment';
 
 function displayComments() {
     const container = document.getElementById('commentsContainer');
@@ -28,15 +17,11 @@ async function submitComment() {
     const input = document.getElementById('commentInput');
     const comment = input.value;
     
-    if (!comment.trim()) {
-        alert('Please enter a comment');
-        return;
-    }
-
-    console.log('Submitting comment:', comment); // Debug log
+    if (!comment.trim()) return;
 
     try {
-        const response = await fetch('/api/add-comment', {
+        // Use the full Vercel URL for API calls
+        const response = await fetch(VERCEL_API_URL, {
             method: 'POST',
             body: JSON.stringify({ comment: comment }),
             headers: {
@@ -44,14 +29,12 @@ async function submitComment() {
             }
         });
 
-        console.log('Response status:', response.status); // Debug log
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
         
         const data = await response.json();
-        console.log('Server response:', data); // Debug log
-
-        if (!response.ok) {
-            throw new Error(`Server error: ${data.message || 'Unknown error'}`);
-        }
+        console.log('Server response:', data);
         
         // Add comment to local array
         comments.unshift({
@@ -64,17 +47,23 @@ async function submitComment() {
         
         // Clear input
         input.value = '';
-        alert('Comment added successfully!');
         
     } catch (error) {
-        console.error('Full error details:', error);
-        alert('Failed to submit comment: ' + error.message);
+        console.error('Error:', error);
+        alert('Failed to submit comment. Please try again.');
     }
 }
 
+// Load existing comments when page loads
+async function loadComments() {
+    try {
+        const response = await fetch('https://raw.githubusercontent.com/putteneersjoris/vercel-testing/main/src/data/comments.json');
+        const data = await response.json();
+        comments = data.comments;
+        displayComments();
+    } catch (error) {
+        console.error('Error loading comments:', error);
+    }
+}
 
 document.addEventListener('DOMContentLoaded', loadComments);
-
-
-
-
