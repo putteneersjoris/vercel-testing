@@ -1,4 +1,3 @@
-// Keep comments in memory during session
 let comments = [];
 
 function displayComments() {
@@ -17,7 +16,12 @@ async function submitComment() {
     const input = document.getElementById('commentInput');
     const comment = input.value;
     
-    if (!comment.trim()) return;
+    if (!comment.trim()) {
+        alert('Please enter a comment');
+        return;
+    }
+
+    console.log('Submitting comment:', comment); // Debug log
 
     try {
         const response = await fetch('/api/add-comment', {
@@ -28,12 +32,14 @@ async function submitComment() {
             }
         });
 
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
+        console.log('Response status:', response.status); // Debug log
         
         const data = await response.json();
-        console.log('Server response:', data);
+        console.log('Server response:', data); // Debug log
+
+        if (!response.ok) {
+            throw new Error(`Server error: ${data.message || 'Unknown error'}`);
+        }
         
         // Add comment to local array
         comments.unshift({
@@ -46,33 +52,10 @@ async function submitComment() {
         
         // Clear input
         input.value = '';
+        alert('Comment added successfully!');
         
     } catch (error) {
-        console.error('Error:', error);
-        alert('Failed to submit comment. Please try again.');
+        console.error('Full error details:', error);
+        alert('Failed to submit comment: ' + error.message);
     }
 }
-
-async function loadComments() {
-    try {
-        const response = await fetch('https://raw.githubusercontent.com/putteneersjoris/vercel-testing/main/src/data/comments.json');
-        const data = await response.json();
-        comments = data.comments;
-        displayComments();
-    } catch (error) {
-        console.error('Error loading comments:', error);
-    }
-}
-
-// Load comments when page loads
-document.addEventListener('DOMContentLoaded', loadComments);
-
-
-
-
-
-
-
-
-
-
