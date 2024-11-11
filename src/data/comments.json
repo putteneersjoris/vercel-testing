@@ -1,6 +1,10 @@
 {
   "comments": [
     {
+      "text": "// Weird characters emoji: 🚀🌈💫 null characters: \\0\\0\\0 unicode: ∑∏✓☃",
+      "timestamp": "2024-11-11T14:40:40.082Z"
+    },
+    {
       "text": "\"a\".repeat(10000)",
       "timestamp": "2024-11-11T14:40:13.960Z"
     },
