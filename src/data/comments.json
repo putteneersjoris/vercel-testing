@@ -1,6 +1,12 @@
 {
   "comments": [
     {
+      "text": "<img src=\"https://example.com/image.jpg\"> <img src=\"/api/placeholder/400/320\">",
+      "timestamp": "2024-11-11T15:15:52.980Z",
+      "location": "Bangkok, Thailand",
+      "ip": "49.230.xxx.xxx"
+    },
+    {
       "text": "testing",
       "timestamp": "2024-11-11T15:10:43.311Z",
       "location": "Bangkok, Thailand",
