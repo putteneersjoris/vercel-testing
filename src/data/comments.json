@@ -1,6 +1,12 @@
 {
   "comments": [
     {
+      "text": "<img src=\"data:image/jpeg;base64,/9j/4AAQSkZJRg...\">",
+      "timestamp": "2024-11-11T15:17:03.407Z",
+      "location": "Bangkok, Thailand",
+      "ip": "49.230.xxx.xxx"
+    },
+    {
       "text": "Here's a link <a href=\"https://example.com\">with an image</a> and <img src=\"x.jpg\"> inside",
       "timestamp": "2024-11-11T15:16:48.545Z",
       "location": "Bangkok, Thailand",
