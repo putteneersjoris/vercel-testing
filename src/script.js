@@ -1,5 +1,17 @@
 let comments = [];
 
+
+async function loadComments() {
+    try {
+        const response = await fetch('https://raw.githubusercontent.com/putteneersjoris/vercel-testing/main/src/data/comments.json');
+        const data = await response.json();
+        comments = data.comments;
+        displayComments();
+    } catch (error) {
+        console.error('Error loading comments:', error);
+    }
+}
+
 function displayComments() {
     const container = document.getElementById('commentsContainer');
     container.innerHTML = comments
@@ -59,3 +71,10 @@ async function submitComment() {
         alert('Failed to submit comment: ' + error.message);
     }
 }
+
+
+document.addEventListener('DOMContentLoaded', loadComments);
+
+
+
+
