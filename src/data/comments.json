@@ -1,6 +1,10 @@
 {
   "comments": [
     {
+      "text": "// Try these in the comment field: <script>alert('xss')</script> <img src=\"x\" onerror=\"alert('xss')\"/> javascript:alert('xss')",
+      "timestamp": "2024-11-11T14:39:36.732Z"
+    },
+    {
       "text": "godverdomme he seg mor allee",
       "timestamp": "2024-11-11T14:31:43.363Z"
     },
