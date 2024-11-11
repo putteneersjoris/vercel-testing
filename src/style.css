@@ -35,3 +35,29 @@ button:hover {
     background: #e0e0e0;
 }
 
+
+
+#previousComments {
+    margin-top: 40px;
+    max-width: 600px;
+}
+
+.comment {
+    background: #f8f8f8;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 4px;
+    border: 1px solid #eee;
+}
+
+.comment p {
+    margin: 0 0 5px 0;
+}
+
+.comment small {
+    color: #666;
+}
+
+#commentsContainer {
+    margin-top: 20px;
+}

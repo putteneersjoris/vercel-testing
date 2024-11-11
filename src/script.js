@@ -1,9 +1,26 @@
+// Keep comments in memory during session
+let comments = [];
+
+function displayComments() {
+    const container = document.getElementById('commentsContainer');
+    container.innerHTML = comments
+        .map(comment => `
+            <div class="comment">
+                <p>${comment.text}</p>
+                <small>${new Date(comment.timestamp).toLocaleString()}</small>
+            </div>
+        `)
+        .join('');
+}
+
 async function submitComment() {
-    const comment = document.getElementById('commentInput').value;
-    const apiUrl = 'https://vercel-testing-8k66qiqao-putteneersjoris-projects.vercel.app/api/add-comment';
+    const input = document.getElementById('commentInput');
+    const comment = input.value;
+    
+    if (!comment.trim()) return; // Don't submit empty comments
 
     try {
-        const response = await fetch(apiUrl, {
+        const response = await fetch('https://vercel-testing-8k66qiqao-putteneersjoris-projects.vercel.app/api/add-comment', {
             method: 'POST',
             body: JSON.stringify({ comment: comment }),
             headers: {
@@ -11,7 +28,19 @@ async function submitComment() {
             }
         });
         const data = await response.json();
-        alert(data.message);
+        
+        // Add comment to local array
+        comments.unshift({
+            text: comment,
+            timestamp: new Date()
+        });
+        
+        // Update display
+        displayComments();
+        
+        // Clear input
+        input.value = '';
+        
     } catch (error) {
         console.error('Error:', error);
     }
