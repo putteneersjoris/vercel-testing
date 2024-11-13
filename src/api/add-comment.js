@@ -13,8 +13,9 @@ export default async function handler(request, response) {
 
     if (request.method === 'POST') {
         try {
-            const { comment } = request.body;
-            
+      	    const { comment, x, y } = request.body;
+            console.log('Received comment:', comment, 'at position:', x, y);      
+
             // Get IP from Vercel request
             const ip = request.headers['x-forwarded-for'] || request.socket.remoteAddress;
             
@@ -46,10 +47,15 @@ export default async function handler(request, response) {
             currentContent.comments.unshift({
                 text: comment,
                 timestamp: new Date().toISOString(),
+         	x: x,
+		y: y,
+	        // Only store partial IP for privacy
                 location: location,
-                // Only store partial IP for privacy
-                ip: ip.split('.').slice(0, 2).join('.') + '.xxx.xxx'
+       		ip: ip.split('.').slice(0, 2).join('.') + '.xxx.xxx'
             });
+
+
+
 
             await octokit.repos.createOrUpdateFileContents({
                 owner: 'putteneersjoris',

@@ -1,34 +1,65 @@
 let comments = [];
 const VERCEL_API_URL = 'https://vercel-testing-git-main-putteneersjoris-projects.vercel.app/api/add-comment';
+let currentX = 0;
+let currentY = 0;
 
+// Track mouse position
+document.addEventListener('mousemove', (e) => {
+    currentX = e.clientX;
+    currentY = e.clientY;
+});
 
-function displayComments() {
+function showCommentSection(x, y) {
+    const commentSection = document.getElementById('commentSection');
+    commentSection.style.display = 'block';
+    commentSection.style.left = `${x}px`;
+    commentSection.style.top = `${y}px`;
+    
+    // Load location-specific comments
+    displayComments(x, y);
+}
+
+function hideCommentSection() {
+    document.getElementById('commentSection').style.display = 'none';
+}
+
+function displayComments(x, y) {
     const container = document.getElementById('commentsContainer');
-    container.innerHTML = comments
+    
+    // Filter comments for this location (within 50px radius)
+    const nearbyComments = comments.filter(comment => {
+        const dx = comment.x - x;
+        const dy = comment.y - y;
+        return Math.sqrt(dx * dx + dy * dy) < 50;
+    });
+
+    container.innerHTML = nearbyComments
         .map(comment => `
             <div class="comment">
                 <p>${comment.text}</p>
-                <small>
-                    Posted on: ${new Date(comment.timestamp).toLocaleString()}
-                    ${comment.location ? `<br>From: ${comment.location}` : ''} on coordinates: 
-                </small>
+                <div class="location">Position: (${comment.x}, ${comment.y})</div>
+                <div class="timestamp">${new Date(comment.timestamp).toLocaleString()}</div>
             </div>
         `)
         .join('');
 }
 
-
-async function submitComment() {
+sync function submitComment() {
     const input = document.getElementById('commentInput');
     const comment = input.value;
     
     if (!comment.trim()) return;
 
     try {
-        // Use the full Vercel URL for API calls
+        const commentData = {
+            comment: comment,
+            x: currentX,
+            y: currentY
+        };
+
         const response = await fetch(VERCEL_API_URL, {
             method: 'POST',
-            body: JSON.stringify({ comment: comment }),
+            body: JSON.stringify(commentData),
             headers: {
                 'Content-Type': 'application/json',
             }
@@ -39,16 +70,17 @@ async function submitComment() {
         }
         
         const data = await response.json();
-        console.log('Server response:', data);
         
         // Add comment to local array
         comments.unshift({
             text: comment,
+            x: currentX,
+            y: currentY,
             timestamp: new Date()
         });
         
         // Update display
-        displayComments();
+        displayComments(currentX, currentY);
         
         // Clear input
         input.value = '';
@@ -58,6 +90,21 @@ async function submitComment() {
         alert('Failed to submit comment. Please try again.');
     }
 }
+
+
+
+// Handle keyboard events
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+        e.preventDefault(); // Prevent default tab behavior
+        showCommentSection(currentX, currentY);
+    } else if (e.key === 'Escape') {
+        hideCommentSection();
+    }
+});
+
+
+
 
 // Load existing comments when page loads
 async function loadComments() {
@@ -72,3 +119,13 @@ async function loadComments() {
 }
 
 document.addEventListener('DOMContentLoaded', loadComments);
+
+
+
+
+
+
+
+
+
+
