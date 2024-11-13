@@ -1,6 +1,6 @@
 import { Octokit } from "@octokit/rest";
 
-rxport default async function handler(request, response) {
+export default async function handler(request, response) {
     response.setHeader('Access-Control-Allow-Credentials', true);
     response.setHeader('Access-Control-Allow-Origin', '*');
     response.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
