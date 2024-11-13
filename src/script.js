@@ -10,7 +10,7 @@ function displayComments() {
                 <p>${comment.text}</p>
                 <small>
                     Posted on: ${new Date(comment.timestamp).toLocaleString()}
-                    ${comment.location ? `<br>From: ${comment.location}` : ''}
+                    ${comment.location ? `<br>From: ${comment.location}` : ''} on coordinates: 
                 </small>
             </div>
         `)
