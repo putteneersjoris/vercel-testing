@@ -1,10 +1,20 @@
 let comments = [];
 const VERCEL_API_URL = 'https://vercel-testing-git-main-putteneersjoris-projects.vercel.app/api/add-comment';
 let clickCoordinates = null;
+let mouseX = 0;
+let mouseY = 0;
+
+// Track mouse position
+document.addEventListener('mousemove', (event) => {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+});
 
 function displayComments() {
+    // Remove existing comments
     document.querySelectorAll('.comment').forEach(el => el.remove());
     
+    // Display each comment at its coordinates
     comments.forEach(comment => {
         const commentEl = document.createElement('div');
         commentEl.className = 'comment';
@@ -14,6 +24,7 @@ function displayComments() {
             ${comment.location ? `<div class="location">📍 ${comment.location}</div>` : ''}
         `;
         
+        // Position the comment
         if (comment.coordinates) {
             commentEl.style.left = `${comment.coordinates.x}px`;
             commentEl.style.top = `${comment.coordinates.y}px`;
@@ -58,6 +69,7 @@ async function submitComment() {
         displayComments();
         input.value = '';
         
+        // Hide form after submission
         document.getElementById('commentForm').classList.add('hidden');
         
     } catch (error) {
@@ -84,15 +96,15 @@ document.addEventListener('keydown', (event) => {
         const commentForm = document.getElementById('commentForm');
         const commentInput = document.getElementById('commentInput');
 
-        // Get coordinates directly from the event
+        // Use tracked mouse position instead of event coordinates
         clickCoordinates = {
-            x: event.pageX,
-            y: event.pageY
+            x: mouseX,
+            y: mouseY
         };
 
-        // Position the form
-        commentForm.style.left = `${event.pageX}px`;
-        commentForm.style.top = `${event.pageY}px`;
+        // Position the form at mouse coordinates
+        commentForm.style.left = `${mouseX}px`;
+        commentForm.style.top = `${mouseY}px`;
         
         commentForm.classList.remove('hidden');
         commentInput.focus();
