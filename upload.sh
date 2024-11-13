@@ -11,6 +11,9 @@ fi
 commit_message="$1"
 
 # Execute git commands
+git pull
+echo "all files are pulled" 
+
 git add .
 echo "Added all files to staging area"
 
