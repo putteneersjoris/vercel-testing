@@ -10,10 +10,12 @@ fi
 # Store the commit message
 commit_message="$1"
 
-# Execute git commands
+# Pull latest changes
+echo "Pulling latest changes..."
 git pull
-echo "all files are pulled" 
+echo "Pull complete"
 
+# Execute git commands
 git add .
 echo "Added all files to staging area"
 
