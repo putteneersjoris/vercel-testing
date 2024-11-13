@@ -1,7 +1,6 @@
 import { Octokit } from "@octokit/rest";
 
 export default async function handler(request, response) {
-    // CORS headers
     response.setHeader('Access-Control-Allow-Credentials', true);
     response.setHeader('Access-Control-Allow-Origin', '*');
     response.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
@@ -13,23 +12,18 @@ export default async function handler(request, response) {
 
     if (request.method === 'POST') {
         try {
-      	    const { comment, x, y } = request.body;
-            console.log('Received comment:', comment, 'at position:', x, y);      
+            const { comment } = request.body;
+            console.log('Received comment:', comment);
 
-            // Get IP from Vercel request
-            const ip = request.headers['x-forwarded-for'] || request.socket.remoteAddress;
+            // Get IP address from request
+            const ip = request.headers['x-forwarded-for'] || request.headers['x-real-ip'] || 'unknown';
             
-            // Get location from IP (using free IP API)
-            let location = 'Unknown';
-            try {
-                const ipResponse = await fetch(`http://ip-api.com/json/${ip}`);
-                const ipData = await ipResponse.json();
-                if (ipData.status === 'success') {
-                    location = `${ipData.city}, ${ipData.country}`;
-                }
-            } catch (error) {
-                console.error('Error getting location:', error);
-            }
+            // Get location from IP (approximate)
+            const locationResponse = await fetch(`http://ip-api.com/json/${ip}`);
+            const locationData = await locationResponse.json();
+            const location = locationData.status === 'success' 
+                ? `${locationData.city}, ${locationData.country}` 
+                : 'Location unknown';
 
             const octokit = new Octokit({
                 auth: process.env.GITHUB_TOKEN
@@ -43,19 +37,11 @@ export default async function handler(request, response) {
 
             const currentContent = JSON.parse(Buffer.from(fileData.content, 'base64').toString());
             
-            // Add new comment with IP and location
             currentContent.comments.unshift({
                 text: comment,
                 timestamp: new Date().toISOString(),
-         	x: x,
-		y: y,
-	        // Only store partial IP for privacy
-                location: location,
-       		ip: ip.split('.').slice(0, 2).join('.') + '.xxx.xxx'
+                location: location
             });
-
-
-
 
             await octokit.repos.createOrUpdateFileContents({
                 owner: 'putteneersjoris',

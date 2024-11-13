@@ -1,18 +1,26 @@
-<!DOCTYPE html>
+CTYPE html>
 <html>
 <head>
     <title>Comment Test</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Comment section will be positioned dynamically -->
-    <div id="commentSection">
+    <h1>Test Comments</h1>
+    
+    <div id="commentForm" class="comment-form hidden">
         <input type="text" id="commentInput" placeholder="Write comment">
         <button onclick="submitComment()">Submit</button>
-        <div id="commentsContainer">
-            <!-- Location-specific comments will appear here -->
-        </div>
+        <p class="hint">Press ESC to close</p>
     </div>
+
+    <section id="previousComments">
+        <h2>Previous Comments</h2>
+        <p class="hint">Press TAB to add a comment</p>
+        <div id="commentsContainer">
+            <!-- Comments will be inserted here -->
+        </div>
+    </section>
 </body>
 <script src="script.js"></script>
 </html>
+
