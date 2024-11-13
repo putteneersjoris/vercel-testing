@@ -3,10 +3,8 @@ const VERCEL_API_URL = 'https://vercel-testing-git-main-putteneersjoris-projects
 let clickCoordinates = null;
 
 function displayComments() {
-    // Remove existing comments
     document.querySelectorAll('.comment').forEach(el => el.remove());
     
-    // Display each comment at its coordinates
     comments.forEach(comment => {
         const commentEl = document.createElement('div');
         commentEl.className = 'comment';
@@ -16,7 +14,6 @@ function displayComments() {
             ${comment.location ? `<div class="location">📍 ${comment.location}</div>` : ''}
         `;
         
-        // Position the comment
         if (comment.coordinates) {
             commentEl.style.left = `${comment.coordinates.x}px`;
             commentEl.style.top = `${comment.coordinates.y}px`;
@@ -61,7 +58,6 @@ async function submitComment() {
         displayComments();
         input.value = '';
         
-        // Hide form after submission
         document.getElementById('commentForm').classList.add('hidden');
         
     } catch (error) {
@@ -88,15 +84,15 @@ document.addEventListener('keydown', (event) => {
         const commentForm = document.getElementById('commentForm');
         const commentInput = document.getElementById('commentInput');
 
-        // Store click coordinates
+        // Get coordinates directly from the event
         clickCoordinates = {
-            x: event.clientX || window.innerWidth / 2,
-            y: event.clientY || window.innerHeight / 2
+            x: event.pageX,
+            y: event.pageY
         };
 
-        // Position the form at click coordinates
-        commentForm.style.left = `${clickCoordinates.x}px`;
-        commentForm.style.top = `${clickCoordinates.y}px`;
+        // Position the form
+        commentForm.style.left = `${event.pageX}px`;
+        commentForm.style.top = `${event.pageY}px`;
         
         commentForm.classList.remove('hidden');
         commentInput.focus();
