@@ -1,4 +1,7 @@
 let comments = [];
+
+
+
 const VERCEL_API_URL = 'https://vercel-testing-git-main-putteneersjoris-projects.vercel.app/api/add-comment';
 let clickCoordinates = null;
 
