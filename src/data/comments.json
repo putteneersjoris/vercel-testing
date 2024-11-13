@@ -1,6 +1,15 @@
 {
   "comments": [
     {
+      "text": "top right",
+      "timestamp": "2024-11-13T09:45:28.979Z",
+      "location": "Bangkok, Thailand",
+      "coordinates": {
+        "x": 960,
+        "y": 523
+      }
+    },
+    {
       "text": "bottom right",
       "timestamp": "2024-11-13T09:45:16.622Z",
       "location": "Bangkok, Thailand",
