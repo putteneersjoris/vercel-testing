@@ -1,3 +1,13 @@
 {
-  "comments": []
+  "comments": [
+    {
+      "text": "asdfasdf",
+      "timestamp": "2024-11-13T09:33:53.836Z",
+      "location": "Bangkok, Thailand",
+      "coordinates": {
+        "x": 960,
+        "y": 523
+      }
+    }
+  ]
 }
