@@ -1,6 +1,6 @@
 import { Octokit } from "@octokit/rest";
 
-export default async function handler(request, response) {
+rxport default async function handler(request, response) {
     response.setHeader('Access-Control-Allow-Credentials', true);
     response.setHeader('Access-Control-Allow-Origin', '*');
     response.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
@@ -36,13 +36,16 @@ export default async function handler(request, response) {
             });
 
             const currentContent = JSON.parse(Buffer.from(fileData.content, 'base64').toString());
-            
+           
+
+            // Add new comment with coordinates
             currentContent.comments.unshift({
                 text: comment,
                 timestamp: new Date().toISOString(),
-                location: location
+                location: location,
+                coordinates: request.body.coordinates || null
             });
-
+ 
             await octokit.repos.createOrUpdateFileContents({
                 owner: 'putteneersjoris',
                 repo: 'vercel-testing',

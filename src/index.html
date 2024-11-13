@@ -6,21 +6,13 @@
 </head>
 <body>
     <h1>Test Comments</h1>
+    <p class="hint" style="padding: 0 20px;">Press TAB anywhere to add a comment</p>
     
     <div id="commentForm" class="comment-form hidden">
         <input type="text" id="commentInput" placeholder="Write comment">
         <button onclick="submitComment()">Submit</button>
         <p class="hint">Press ESC to close</p>
     </div>
-
-    <section id="previousComments">
-        <h2>Previous Comments</h2>
-        <p class="hint">Press TAB to add a comment</p>
-        <div id="commentsContainer">
-            <!-- Comments will be inserted here -->
-        </div>
-    </section>
 </body>
 <script src="script.js"></script>
 </html>
-

@@ -1,17 +1,29 @@
 let comments = [];
 const VERCEL_API_URL = 'https://vercel-testing-git-main-putteneersjoris-projects.vercel.app/api/add-comment';
+let clickCoordinates = null;
 
 function displayComments() {
-    const container = document.getElementById('commentsContainer');
-    container.innerHTML = comments
-        .map(comment => `
-            <div class="comment">
-                <p>${comment.text}</p>
-                <small>${new Date(comment.timestamp).toLocaleString()}</small>
-                ${comment.location ? `<div class="location">📍 ${comment.location}</div>` : ''}
-            </div>
-        `)
-        .join('');
+    // Remove existing comments
+    document.querySelectorAll('.comment').forEach(el => el.remove());
+    
+    // Display each comment at its coordinates
+    comments.forEach(comment => {
+        const commentEl = document.createElement('div');
+        commentEl.className = 'comment';
+        commentEl.innerHTML = `
+            <p>${comment.text}</p>
+            <small>${new Date(comment.timestamp).toLocaleString()}</small>
+            ${comment.location ? `<div class="location">📍 ${comment.location}</div>` : ''}
+        `;
+        
+        // Position the comment
+        if (comment.coordinates) {
+            commentEl.style.left = `${comment.coordinates.x}px`;
+            commentEl.style.top = `${comment.coordinates.y}px`;
+        }
+        
+        document.body.appendChild(commentEl);
+    });
 }
 
 async function submitComment() {
@@ -23,7 +35,10 @@ async function submitComment() {
     try {
         const response = await fetch(VERCEL_API_URL, {
             method: 'POST',
-            body: JSON.stringify({ comment: comment }),
+            body: JSON.stringify({ 
+                comment: comment,
+                coordinates: clickCoordinates
+            }),
             headers: {
                 'Content-Type': 'application/json',
             }
@@ -39,11 +54,15 @@ async function submitComment() {
         comments.unshift({
             text: comment,
             timestamp: new Date(),
-            location: data.location
+            location: data.location,
+            coordinates: clickCoordinates
         });
         
         displayComments();
         input.value = '';
+        
+        // Hide form after submission
+        document.getElementById('commentForm').classList.add('hidden');
         
     } catch (error) {
         console.error('Error:', error);
@@ -64,16 +83,29 @@ async function loadComments() {
 
 // Keyboard controls
 document.addEventListener('keydown', (event) => {
-    const commentForm = document.getElementById('commentForm');
-    const commentInput = document.getElementById('commentInput');
-
     if (event.key === 'Tab') {
         event.preventDefault();
+        const commentForm = document.getElementById('commentForm');
+        const commentInput = document.getElementById('commentInput');
+
+        // Store click coordinates
+        clickCoordinates = {
+            x: event.clientX || window.innerWidth / 2,
+            y: event.clientY || window.innerHeight / 2
+        };
+
+        // Position the form at click coordinates
+        commentForm.style.left = `${clickCoordinates.x}px`;
+        commentForm.style.top = `${clickCoordinates.y}px`;
+        
         commentForm.classList.remove('hidden');
         commentInput.focus();
     } else if (event.key === 'Escape') {
+        const commentForm = document.getElementById('commentForm');
+        const commentInput = document.getElementById('commentInput');
         commentForm.classList.add('hidden');
         commentInput.value = '';
+        clickCoordinates = null;
     }
 });
 
