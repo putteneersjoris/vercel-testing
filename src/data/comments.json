@@ -2,6 +2,14 @@
   "comments": [
     {
       "text": "test",
+      "timestamp": "2024-11-13T08:42:00.647Z",
+      "x": 304,
+      "y": 36,
+      "location": "Bangkok, Thailand",
+      "ip": "182.232.xxx.xxx"
+    },
+    {
+      "text": "test",
       "timestamp": "2024-11-13T08:41:51.051Z",
       "x": 266,
       "y": 36,
