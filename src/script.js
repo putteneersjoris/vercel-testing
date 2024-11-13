@@ -44,7 +44,7 @@ function displayComments(x, y) {
         .join('');
 }
 
-sync function submitComment() {
+async function submitComment() {
     const input = document.getElementById('commentInput');
     const comment = input.value;
     
@@ -91,8 +91,6 @@ sync function submitComment() {
     }
 }
 
-
-
 // Handle keyboard events
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Tab') {
@@ -103,16 +101,12 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-
-
-
 // Load existing comments when page loads
 async function loadComments() {
     try {
         const response = await fetch('https://raw.githubusercontent.com/putteneersjoris/vercel-testing/main/src/data/comments.json');
         const data = await response.json();
         comments = data.comments;
-        displayComments();
     } catch (error) {
         console.error('Error loading comments:', error);
     }
