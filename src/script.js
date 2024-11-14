@@ -1,6 +1,14 @@
 let comments = [];
 const VERCEL_API_URL = 'https://vercel-testing-git-main-putteneersjoris-projects.vercel.app/api/add-comment';
 let clickCoordinates = null;
+let mouseX = 0;
+let mouseY = 0;
+
+// Track mouse position
+document.addEventListener('mousemove', (event) => {
+    mouseX = event.clientX;
+    mouseY = event.clientY;
+});
 
 function displayComments() {
     // Remove existing comments
@@ -16,6 +24,7 @@ function displayComments() {
             ${comment.location ? `<div class="location">📍 ${comment.location}</div>` : ''}
         `;
         
+        // Position the comment
         if (comment.coordinates) {
             commentEl.style.left = `${comment.coordinates.x}px`;
             commentEl.style.top = `${comment.coordinates.y}px`;
@@ -48,6 +57,7 @@ async function submitComment() {
         }
         
         const data = await response.json();
+        console.log('Server response:', data);
         
         comments.unshift({
             text: comment,
@@ -58,6 +68,8 @@ async function submitComment() {
         
         displayComments();
         input.value = '';
+        
+        // Hide form after submission
         document.getElementById('commentForm').classList.add('hidden');
         
     } catch (error) {
@@ -77,25 +89,26 @@ async function loadComments() {
     }
 }
 
-// Single keyboard event listener
+// Keyboard controls
 document.addEventListener('keydown', (event) => {
     if (event.key === 'Tab') {
         event.preventDefault();
         const commentForm = document.getElementById('commentForm');
         const commentInput = document.getElementById('commentInput');
 
-        // Get mouse position only when needed
+        // Use tracked mouse position instead of event coordinates
         clickCoordinates = {
-            x: event.pageX || event.clientX,
-            y: event.pageY || event.clientY
+            x: mouseX,
+            y: mouseY
         };
 
-        commentForm.style.left = `${clickCoordinates.x}px`;
-        commentForm.style.top = `${clickCoordinates.y}px`;
+        // Position the form at mouse coordinates
+        commentForm.style.left = `${mouseX}px`;
+        commentForm.style.top = `${mouseY}px`;
         
         commentForm.classList.remove('hidden');
         commentInput.focus();
-    } else if (event.key === 'Escape') {
+    } else if (event.key === 'Space') {
         const commentForm = document.getElementById('commentForm');
         const commentInput = document.getElementById('commentInput');
         commentForm.classList.add('hidden');

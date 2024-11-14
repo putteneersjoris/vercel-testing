@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Ubuntu Mono';
+    src: url('https://cdnjs.cloudflare.com/ajax/libs/ubuntu-font-family/0.83/UbuntuMono-R.ttf') format('truetype');
+}
+
+body {
+    background-color: #000000;
+    color: #F8F8F2;
+    font-family: 'Ubuntu Mono', monospace;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.tree-line {
+    white-space: pre;
+    margin: 0;
+    height: 1.2em;
+    display: flex;
+    align-items: center;
+}
+
+.tree-structure {
+    color: #F8F8F2;
+}
+
+.tree-name {
+    margin-left: -1px;
+}
+
+.directory {
+    color: #0087FF;
+}
+
+.file-image {
+    color: #FF9CD5;
+}
+
+.file-archive {
+    color: #FF5555;
+}
+
+.file-document {
+    color: #FFB86C;
+}
+
+.file-code {
+    color: #50FA7B;
+}
+
+.file-executable {
+    color: #50FA7B;
+}
+
+.file-default {
+    color: #F8F8F2;
+}
+
+details {
+    margin-left: 0;
+}
+
+summary {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::before {
+    content: '▶';
+    color: #6272A4;
+    margin-right: 4px;
+    font-size: 10px;
+    transition: transform 0.2s;
+}
+
+details[open] > summary::before {
+    content: '▼';
+}
+
+summary:hover::before {
+    color: #F8F8F2;
+}
+
+.folder-content {
+    margin-left: 0;
+}
+
+h2 {
+    font-family: 'Ubuntu Mono', monospace;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
