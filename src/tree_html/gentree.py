@@ -5,8 +5,8 @@ from datetime import datetime
 def get_file_type_color(filename):
     """Return color based on file type using RGB colors"""
     # Images
-    if re.search(r'\.(jpg|jpeg|png|gif|bmp|svg|webp)$', filename.lower()):
-        return 'rgb(255,0,255)'
+    if re.search(r'\.(jpg|jpeg|png|gif|bmp|svg|webp|mp4|mp3)$', filename.lower()):
+        return 'rgb(255,100,255)'
     
     # Archives/Important
     elif re.search(r'\.(zip|tar|gz|rar|7z)$', filename.lower()):
@@ -17,14 +17,14 @@ def get_file_type_color(filename):
         return 'rgb(0, 255, 0)'
     
     # Code files
-    elif re.search(r'\.(py|js|html|css|cpp|java|php)$', filename.lower()):
+    elif re.search(r'\.(py|js|html|css|cpp|java|php|pyc|hiplc)$', filename.lower()):
         return 'rgb(255,255, 255)'
     
     # Documents
-    elif re.search(r'\.(pdf|doc|docx|txt|md|csv|json)$', filename.lower()):
+    elif re.search(r'\.(pdf|doc|docx|txt|md|csv|json|ttf)$', filename.lower()):
         return 'rgb(255, 255, 255)'
     
-    return 'rgb(0,0, 255)'  # Default white
+    return 'rgb(100,100, 255)'  # Default white
 
 def parse_tree_output(input_file):
     """Parse the tree command output and convert to HTML with colors"""
