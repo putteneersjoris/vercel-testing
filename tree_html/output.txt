@@ -1,0 +1,681 @@
+.
+├── annelottelammertse
+│   ├── dataREADME.py
+│   ├── example
+│   │   ├── demoproject
+│   │   │   ├── 1.png
+│   │   │   ├── 2.png
+│   │   │   ├── 3.png
+│   │   │   └── description.txt
+│   │   └── videos
+│   │       ├── admin_approve_project.gif
+│   │       ├── admin_approve_project.mp4
+│   │       ├── admin_remove_project.gif
+│   │       ├── admin_remove_project.mp4
+│   │       ├── admin_update_project.gif
+│   │       ├── admin_update_project.mp4
+│   │       ├── admin_upload_project.gif
+│   │       ├── admin_upload_project.mp4
+│   │       ├── user_fork_repository.gif
+│   │       ├── user_fork_repository.mp4
+│   │       ├── user_remove_project.gif
+│   │       ├── user_remove_project.mp4
+│   │       ├── user_update_project.gif
+│   │       ├── user_update_project.mp4
+│   │       ├── user_upload_project.gif
+│   │       ├── user_upload_project.mp4
+│   │       ├── website_navigation.gif
+│   │       └── website_navigation.mp4
+│   ├── generateREADME.py
+│   ├── __pycache__
+│   │   └── dataREADME.cpython-310.pyc
+│   ├── README.md
+│   └── src
+│       ├── about me.html
+│       ├── birds nest.html
+│       ├── Black ash desert.html
+│       ├── containers.html
+│       ├── content
+│       │   ├── about me
+│       │   │   ├── description.txt
+│       │   │   ├── DSC_0018___processed.png
+│       │   │   ├── DSC_0021___processed.png
+│       │   │   ├── DSC_0047___processed.png
+│       │   │   └── DSC_0058___processed.png
+│       │   ├── birds nest
+│       │   │   ├── description.txt
+│       │   │   ├── SHIPYARD_61___processed.png
+│       │   │   ├── SHIPYARD_62___processed.png
+│       │   │   └── SHIPYARD_63___processed.png
+│       │   ├── Black ash desert
+│       │   │   ├── BLACK_ASH_DESERT_246___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_251___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_255___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_257___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_259___processed.png
+│       │   │   └── description.txt
+│       │   ├── containers
+│       │   │   ├── description.txt
+│       │   │   ├── Shipping_Containers__85____processed.png
+│       │   │   ├── Shipping_Containers__86____processed.png
+│       │   │   └── Shipping_Containers__87____processed.png
+│       │   ├── fountain
+│       │   │   ├── description.txt
+│       │   │   ├── HOT_SPRINGS_092___processed.png
+│       │   │   ├── HOT_SPRINGS_094___processed.png
+│       │   │   └── HOT_SPRINGS_095___processed.png
+│       │   ├── greenland mountainscape
+│       │   │   ├── BLACK_ASH_DESERT_001___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_002___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_003___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_004___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_005___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_006___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_007___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_008___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_009___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_010___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_011___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_012___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_013___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_014___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_015___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_016___processed.png
+│       │   │   └── description.txt
+│       │   ├── hot springs
+│       │   │   ├── description.txt
+│       │   │   └── HOT_SPRINGS_052___processed.png
+│       │   ├── Iceland red rock
+│       │   │   ├── BLACK_ASH_DESERT_162___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_181___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_182___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_183___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_185___processed.png
+│       │   │   └── description.txt
+│       │   ├── indiana desert
+│       │   │   ├── description.txt
+│       │   │   ├── HOT_SPRINGS_011___processed.png
+│       │   │   ├── HOT_SPRINGS_015___processed.png
+│       │   │   ├── HOT_SPRINGS_027___processed.png
+│       │   │   ├── HOT_SPRINGS_038___processed.png
+│       │   │   ├── HOT_SPRINGS_039___processed.png
+│       │   │   └── HOT_SPRINGS_045___processed.png
+│       │   ├── photopack
+│       │   │   ├── BLACK_ASH_DESERT_072___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_118___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_190___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_215___processed.png
+│       │   │   ├── BLACK_ASH_DESERT_216___processed.png
+│       │   │   └── description.txt
+│       │   ├── seabad
+│       │   │   ├── description.txt
+│       │   │   ├── SHIPYARD_10___processed.png
+│       │   │   ├── SHIPYARD_11___processed.png
+│       │   │   └── SHIPYARD_12___processed.png
+│       │   └── shipwreck
+│       │       ├── asd___processed.png
+│       │       └── description.txt
+│       ├── data.js
+│       ├── demoproject.html
+│       ├── extra
+│       │   └── font
+│       │       ├── Roboto-BlackItalic.ttf
+│       │       ├── Roboto-Black.ttf
+│       │       ├── Roboto-BoldItalic.ttf
+│       │       ├── Roboto-Bold.ttf
+│       │       ├── Roboto-Italic.ttf
+│       │       ├── Roboto-LightItalic.ttf
+│       │       ├── Roboto-Light.ttf
+│       │       ├── Roboto-MediumItalic.ttf
+│       │       ├── Roboto-Medium.ttf
+│       │       ├── Roboto-Regular.ttf
+│       │       ├── Roboto-ThinItalic.ttf
+│       │       └── Roboto-Thin.ttf
+│       ├── fountain.html
+│       ├── generateData.py
+│       ├── greenland mountainscape.html
+│       ├── hot springs.html
+│       ├── Iceland red rock.html
+│       ├── index.html
+│       ├── indiana desert.html
+│       ├── photopack.html
+│       ├── __pycache__
+│       │   └── staticHtmlString.cpython-310.pyc
+│       ├── script.js
+│       ├── seabad.html
+│       ├── shipwreck.html
+│       ├── staticHtmlString.py
+│       └── style.css
+├── api_PAT_token_and_file_encryption.txt
+├── hildeverduyn
+│   ├── index.html
+│   ├── media
+│   │   └── pics
+│   │       ├── 10.jpg
+│   │       ├── 11.jpg
+│   │       ├── 12.jpg
+│   │       ├── 13.jpg
+│   │       ├── 14.jpg
+│   │       ├── 15.jpg
+│   │       ├── 16.jpg
+│   │       ├── 1.jpg
+│   │       ├── 2.jpg
+│   │       ├── 3.jpg
+│   │       ├── 4.jpg
+│   │       ├── 5.jpg
+│   │       ├── 6.jpg
+│   │       ├── 7.jpg
+│   │       ├── 8.jpg
+│   │       └── 9.jpg
+│   ├── README.md
+│   ├── src
+│   │   ├── content.js
+│   │   ├── functions.js
+│   │   └── script.js
+│   ├── style
+│   │   ├── 1.jpg
+│   │   ├── Cormorant_Garamond
+│   │   │   ├── CormorantGaramond-BoldItalic.ttf
+│   │   │   ├── CormorantGaramond-Bold.ttf
+│   │   │   ├── CormorantGaramond-Italic.ttf
+│   │   │   ├── CormorantGaramond-LightItalic.ttf
+│   │   │   ├── CormorantGaramond-Light.ttf
+│   │   │   ├── CormorantGaramond-MediumItalic.ttf
+│   │   │   ├── CormorantGaramond-Medium.ttf
+│   │   │   ├── CormorantGaramond-Regular.ttf
+│   │   │   ├── CormorantGaramond-SemiBoldItalic.ttf
+│   │   │   ├── CormorantGaramond-SemiBold.ttf
+│   │   │   └── OFL.txt
+│   │   ├── CormorantGaramond-Regular.ttf
+│   │   ├── f.zip
+│   │   ├── Jacquarda_Bastarda_9_Charted
+│   │   │   └── OFL.txt
+│   │   ├── JacquardaBastarda9Charted-Regular.ttf
+│   │   ├── Jersey_15_Charted
+│   │   │   ├── Jersey15Charted-Regular.ttf
+│   │   │   └── OFL.txt
+│   │   ├── Jersey15Charted-Regular.ttf
+│   │   ├── Micro_5_Charted
+│   │   │   ├── Micro5Charted-Regular.ttf
+│   │   │   └── OFL.txt
+│   │   ├── Micro5Charted-Regular.ttf
+│   │   ├── OFL.txt
+│   │   ├── Schibsted_Grotesk
+│   │   │   ├── OFL.txt
+│   │   │   ├── README.txt
+│   │   │   ├── SchibstedGrotesk-Italic-VariableFont_wght.ttf
+│   │   │   ├── SchibstedGrotesk-VariableFont_wght.ttf
+│   │   │   └── static
+│   │   │       ├── SchibstedGrotesk-BlackItalic.ttf
+│   │   │       ├── SchibstedGrotesk-Black.ttf
+│   │   │       ├── SchibstedGrotesk-BoldItalic.ttf
+│   │   │       ├── SchibstedGrotesk-Bold.ttf
+│   │   │       ├── SchibstedGrotesk-ExtraBoldItalic.ttf
+│   │   │       ├── SchibstedGrotesk-ExtraBold.ttf
+│   │   │       ├── SchibstedGrotesk-Italic.ttf
+│   │   │       ├── SchibstedGrotesk-MediumItalic.ttf
+│   │   │       ├── SchibstedGrotesk-Medium.ttf
+│   │   │       ├── SchibstedGrotesk-Regular.ttf
+│   │   │       ├── SchibstedGrotesk-SemiBoldItalic.ttf
+│   │   │       └── SchibstedGrotesk-SemiBold.ttf
+│   │   └── style.css
+│   └── todo
+├── houdini-eclecticism
+│   ├── corneel_collab
+│   │   └── v1
+│   │       └── factory
+│   │           └── factory_recovered.hiplc
+│   ├── counter.hiplc
+│   ├── david Kahl JSON
+│   │   ├── backup
+│   │   │   ├── extract and use JSON_bak10.hiplc
+│   │   │   ├── extract and use JSON_bak11.hiplc
+│   │   │   ├── extract and use JSON_bak12.hiplc
+│   │   │   ├── extract and use JSON_bak1.hiplc
+│   │   │   ├── extract and use JSON_bak2.hiplc
+│   │   │   ├── extract and use JSON_bak3.hiplc
+│   │   │   ├── extract and use JSON_bak4.hiplc
+│   │   │   ├── extract and use JSON_bak5.hiplc
+│   │   │   ├── extract and use JSON_bak6.hiplc
+│   │   │   ├── extract and use JSON_bak7.hiplc
+│   │   │   ├── extract and use JSON_bak8.hiplc
+│   │   │   └── extract and use JSON_bak9.hiplc
+│   │   ├── extract and use JSON.hiplc
+│   │   ├── index.html
+│   │   ├── learning python in houdini examples.txt
+│   │   ├── RENDER
+│   │   │   ├── ageGuesser_axelle_4.png
+│   │   │   ├── ageGuesser_hilde_0.png
+│   │   │   ├── ageGuesser_inne_2.png
+│   │   │   ├── ageGuesser_johan_1.png
+│   │   │   └── ageGuesser_joris_3.png
+│   │   └── test.json
+│   └── pymeshlab
+│       ├── backup
+│       │   └── meshlab_animation_bak1.hiplc
+│       ├── data
+│       │   ├── import subprocess.py
+│       │   ├── make_animation.py
+│       │   ├── myconfig.py
+│       │   └── run.bat
+│       └── meshlab_animation.hiplc
+├── houdini_to_pure_data_over_TCP
+│   ├── media
+│   │   └── TCP_puredata.png
+│   ├── patch_terminal.pd
+│   ├── README.md
+│   └── send_data_to_puredata_over_tcp.hipnc
+├── kinesis
+│   ├── adjust_brightness.sh
+│   ├── find_last_wrangle.sh
+│   ├── kinesis_mouse_mode.sh
+│   ├── README.md
+│   ├── set_typingspeed.sh
+│   └── smartset_firmware
+│       ├── firmware
+│       │   ├── Adv360_1.0.9_update.upd
+│       │   └── default.upd
+│       └── layouts
+│           ├── layout1.txt
+│           ├── layout2.txt
+│           ├── layout3.txt
+│           ├── layout4.txt
+│           ├── layout5.txt
+│           ├── layout6.txt
+│           ├── layout7.txt
+│           ├── layout8.txt
+│           └── layout9.txt
+├── liselottevroman
+│   ├── README.md
+│   └── src
+│       ├── content
+│       │   ├── about
+│       │   │   ├── eveline
+│       │   │   │   ├── a.png
+│       │   │   │   ├── DESCRIPTION.txt
+│       │   │   │   └── header.png
+│       │   │   └── frank
+│       │   │       ├── DESCRIPTION.txt
+│       │   │       ├── header.png
+│       │   │       └── s.png
+│       │   ├── articles
+│       │   │   ├── article_drawing
+│       │   │   │   ├── DESCRIPTION.txt
+│       │   │   │   ├── header.jpg
+│       │   │   │   ├── IMG_5627-reduced-768x1024.jpg
+│       │   │   │   └── IMG_9711-768x576.jpg
+│       │   │   └── drawing
+│       │   │       ├── DESCRIPTION.txt
+│       │   │       ├── header.jpg
+│       │   │       ├── IMG_5627-reduced-768x1024.jpg
+│       │   │       └── IMG_9752-768x576.jpg
+│       │   ├── projects
+│       │   │   ├── brick
+│       │   │   │   ├── DESCRIPTION.txt
+│       │   │   │   ├── header.jpg
+│       │   │   │   ├── IMG_9711-768x576.jpg
+│       │   │   │   └── IMG_9752-768x576.jpg
+│       │   │   └── foundation
+│       │   │       ├── DESCRIPTION.txt
+│       │   │       ├── header.jpeg
+│       │   │       ├── header.jpg
+│       │   │       └── IMG_5627-reduced-768x1024.jpg
+│       │   └── workshops
+│       │       ├── ciry
+│       │       │   ├── DESCRIPTION.txt
+│       │       │   └── header.png
+│       │       └── thoughts on sketching while walking the dog
+│       │           ├── DESCRIPTION.txt
+│       │           ├── header.jpeg
+│       │           └── IMG_5627-reduced-768x1024.jpg
+│       ├── data.js
+│       ├── index.html
+│       ├── pages
+│       │   ├── article_drawing.html
+│       │   ├── article_drawing-intro.html
+│       │   ├── brick.html
+│       │   ├── brick-intro.html
+│       │   ├── ciry.html
+│       │   ├── ciry-intro.html
+│       │   ├── drawing.html
+│       │   ├── drawing-intro.html
+│       │   ├── eveline.html
+│       │   ├── eveline-intro.html
+│       │   ├── foundation.html
+│       │   ├── foundation-intro.html
+│       │   ├── frank.html
+│       │   ├── frank-intro.html
+│       │   ├── thoughts on sketching while walking the dog.html
+│       │   └── thoughts on sketching while walking the dog-intro.html
+│       ├── produceData.py
+│       ├── script.js
+│       └── style.css
+├── sttudio
+│   ├── \
+│   ├── 1b.png
+│   ├── about.html
+│   ├── b1e91224-6d52-4417-b025-be0ab68ea390
+│   ├── ba70fe79-5362-46c4-90a3-820904475fc0
+│   ├── backup_4_04_2024.zip
+│   ├── contact.html
+│   ├── data
+│   │   ├── 1c.png
+│   │   ├── contact
+│   │   │   ├── contact_plan.png
+│   │   │   ├── instagram_logo_bw.png
+│   │   │   └── linkedin_logo_bw.png
+│   │   ├── landingpage
+│   │   │   ├── omgeving
+│   │   │   │   ├── 1.jpg
+│   │   │   │   └── 20230116_STTUDIO_axo lijn site.jpg
+│   │   │   ├── onderzoek
+│   │   │   │   ├── 1.jpg
+│   │   │   │   ├── 2.jpg
+│   │   │   │   ├── Cover.jpg
+│   │   │   │   └── Voorstelling afbeeldingen.jpg
+│   │   │   └── ontwerp
+│   │   │       ├── 1.jpg
+│   │   │       ├── 2.jpg
+│   │   │       ├── D5_Image_20220927_171253.jpg
+│   │   │       └── Voorstelling afbeeldingen3.jpg
+│   │   ├── projects
+│   │   │   ├── 001 Apollo XI
+│   │   │   │   ├── 001_Apollo_XI.html
+│   │   │   │   ├── Apollo XI (10).jpg
+│   │   │   │   ├── Apollo XI (11).jpg
+│   │   │   │   ├── Apollo XI (12).jpg
+│   │   │   │   ├── Apollo XI (13).jpg
+│   │   │   │   ├── Apollo XI (14).jpg
+│   │   │   │   ├── Apollo XI (15).jpg
+│   │   │   │   ├── Apollo XI (16).jpg
+│   │   │   │   ├── Apollo XI (17).jpg
+│   │   │   │   ├── Apollo XI (18).jpg
+│   │   │   │   ├── Apollo XI (19).jpg
+│   │   │   │   ├── Apollo XI (1).jpg
+│   │   │   │   ├── Apollo XI (20).jpg
+│   │   │   │   ├── Apollo XI (2).jpg
+│   │   │   │   ├── Apollo XI (3).jpg
+│   │   │   │   ├── Apollo XI (4).jpg
+│   │   │   │   ├── Apollo XI (5).jpg
+│   │   │   │   ├── Apollo XI (6)_OPEN.jpg
+│   │   │   │   ├── Apollo XI (7).jpg
+│   │   │   │   ├── Apollo XI (8).jpg
+│   │   │   │   ├── Apollo XI (9).jpg
+│   │   │   │   └── cover.jpg
+│   │   │   ├── 002 Heilig Hart
+│   │   │   │   ├── 002_Heilig_Hart.html
+│   │   │   │   ├── cover.jpg
+│   │   │   │   ├── Heilig Hart (1).jpg
+│   │   │   │   ├── Heilig Hart (2).jpg
+│   │   │   │   ├── Heilig Hart (3).jpg
+│   │   │   │   ├── Heilig Hart (4)_OPEN.jpg
+│   │   │   │   ├── Heilig Hart (5).jpg
+│   │   │   │   ├── Heilig Hart (6)_OPEN.jpg
+│   │   │   │   ├── Heilig Hart (7).jpg
+│   │   │   │   └── Heilig Hart (8).jpg
+│   │   │   ├── 003 Eeuwfeest
+│   │   │   │   ├── 003_Eeuwfeest.html
+│   │   │   │   ├── cover.jpg
+│   │   │   │   ├── Eeuwfeest (10).jpg
+│   │   │   │   ├── Eeuwfeest (11).jpg
+│   │   │   │   ├── Eeuwfeest (1).jpg
+│   │   │   │   ├── Eeuwfeest (2).jpg
+│   │   │   │   ├── Eeuwfeest (3).jpg
+│   │   │   │   ├── Eeuwfeest (4).jpg
+│   │   │   │   ├── Eeuwfeest (5).jpg
+│   │   │   │   ├── Eeuwfeest (6).jpg
+│   │   │   │   ├── Eeuwfeest (7).jpg
+│   │   │   │   ├── Eeuwfeest (8)_OPEN.jpg
+│   │   │   │   └── Eeuwfeest (9).jpg
+│   │   │   ├── 004 Pepers
+│   │   │   │   ├── 004_Pepers.html
+│   │   │   │   ├── cover.jpg
+│   │   │   │   ├── Pepers (1)_OPEN.jpg
+│   │   │   │   └── Pepers (2).jpg
+│   │   │   ├── 005 Oud dorp
+│   │   │   │   ├── 005_Oud_dorp.html
+│   │   │   │   ├── cover.jpg
+│   │   │   │   ├── Oud dorp (1)_OPEN.jpg
+│   │   │   │   ├── Oud dorp (2).jpg
+│   │   │   │   ├── Oud dorp (3).jpg
+│   │   │   │   └── Oud dorp (4).jpg
+│   │   │   ├── 006 Gunst demeyere
+│   │   │   │   └── cover.jpg
+│   │   │   ├── 007 Ringlaan Zuid
+│   │   │   │   ├── 007_Ringlaan_Zuid.html
+│   │   │   │   ├── cover.jpg
+│   │   │   │   ├── Ringlaan Zuid (3)_OPEN.jpg
+│   │   │   │   ├── Ringlaan Zuid (4).jpg
+│   │   │   │   ├── Ringlaan Zuid (5).jpg
+│   │   │   │   └── Ringlaan Zuid (6).jpg
+│   │   │   ├── 011 Urban Depot
+│   │   │   │   ├── 011_Urban_Depot.html
+│   │   │   │   ├── cover.jpg
+│   │   │   │   ├── Urban Depot (10).jpg
+│   │   │   │   ├── Urban Depot (11).jpg
+│   │   │   │   ├── Urban Depot (12).jpg
+│   │   │   │   ├── Urban Depot (13).jpg
+│   │   │   │   ├── Urban Depot (14).jpg
+│   │   │   │   ├── Urban Depot (1).jpg
+│   │   │   │   ├── Urban Depot (2).jpg
+│   │   │   │   ├── Urban Depot (3).jpg
+│   │   │   │   ├── Urban Depot (4).jpg
+│   │   │   │   ├── Urban Depot (5).jpg
+│   │   │   │   ├── Urban Depot (6).jpg
+│   │   │   │   ├── Urban Depot (7).jpg
+│   │   │   │   ├── Urban Depot (8).jpg
+│   │   │   │   └── Urban Depot (9)_OPEN.jpg
+│   │   │   ├── 012 Artstone
+│   │   │   │   └── cover.jpg
+│   │   │   ├── 013 Cementtoren
+│   │   │   │   └── cover.jpg
+│   │   │   ├── 024 SASK
+│   │   │   │   └── cover.jpg
+│   │   │   ├── arrow.png
+│   │   │   └── gro en kennis
+│   │   │       ├── cover.jpg
+│   │   │       └── Onderzoek.html
+│   │   └── spartan-cufonfonts
+│   │       ├── Spartan-Black.ttf
+│   │       ├── Spartan-Bold.ttf
+│   │       ├── Spartan-ExtraBold.ttf
+│   │       ├── Spartan-ExtraLight.ttf
+│   │       ├── Spartan-Light.ttf
+│   │       ├── Spartan-Medium.ttf
+│   │       ├── Spartan-Regular.ttf
+│   │       ├── Spartan-SemiBold.ttf
+│   │       └── Spartan-Thin.ttf
+│   ├── homepage.html
+│   ├── icon.png
+│   ├── index.html
+│   ├── landingpage.html
+│   ├── new_header2.jpg
+│   ├── new_header.jpg
+│   ├── project_1.html
+│   ├── projects.html
+│   ├── README.md
+│   ├── scriptIndex.js
+│   ├── scriptLandingpage.js
+│   ├── scriptProject.js
+│   ├── style.css
+│   ├── testing_fadeout
+│   │   ├── index.html
+│   │   ├── script.js
+│   │   └── style.css
+│   ├── testing.js
+│   └── Website tekst opmerkingen.docx
+├── sttudio_backup
+│   ├── \
+│   ├── 1b.png
+│   ├── about.html
+│   ├── b1e91224-6d52-4417-b025-be0ab68ea390
+│   ├── ba70fe79-5362-46c4-90a3-820904475fc0
+│   ├── backup_4_04_2024.zip
+│   ├── contact.html
+│   ├── data
+│   │   ├── 1c.png
+│   │   ├── contact
+│   │   │   ├── contact_plan.png
+│   │   │   ├── instagram_logo_bw.png
+│   │   │   └── linkedin_logo_bw.png
+│   │   ├── landingpage
+│   │   │   ├── omgeving
+│   │   │   │   ├── 1.jpg
+│   │   │   │   └── 20230116_STTUDIO_axo lijn site.jpg
+│   │   │   ├── onderzoek
+│   │   │   │   ├── 1.jpg
+│   │   │   │   ├── 2.jpg
+│   │   │   │   ├── Cover.jpg
+│   │   │   │   └── Voorstelling afbeeldingen.jpg
+│   │   │   └── ontwerp
+│   │   │       ├── 1.jpg
+│   │   │       ├── 2.jpg
+│   │   │       ├── D5_Image_20220927_171253.jpg
+│   │   │       └── Voorstelling afbeeldingen3.jpg
+│   │   ├── projects
+│   │   │   ├── 001 Apollo XI
+│   │   │   │   ├── 001_Apollo_XI.html
+│   │   │   │   ├── Apollo XI (10).jpg
+│   │   │   │   ├── Apollo XI (11).jpg
+│   │   │   │   ├── Apollo XI (12).jpg
+│   │   │   │   ├── Apollo XI (13).jpg
+│   │   │   │   ├── Apollo XI (14).jpg
+│   │   │   │   ├── Apollo XI (15).jpg
+│   │   │   │   ├── Apollo XI (16).jpg
+│   │   │   │   ├── Apollo XI (17).jpg
+│   │   │   │   ├── Apollo XI (18).jpg
+│   │   │   │   ├── Apollo XI (19).jpg
+│   │   │   │   ├── Apollo XI (1).jpg
+│   │   │   │   ├── Apollo XI (20).jpg
+│   │   │   │   ├── Apollo XI (2).jpg
+│   │   │   │   ├── Apollo XI (3).jpg
+│   │   │   │   ├── Apollo XI (4).jpg
+│   │   │   │   ├── Apollo XI (5).jpg
+│   │   │   │   ├── Apollo XI (6)_OPEN.jpg
+│   │   │   │   ├── Apollo XI (7).jpg
+│   │   │   │   ├── Apollo XI (8).jpg
+│   │   │   │   ├── Apollo XI (9).jpg
+│   │   │   │   └── cover.jpg
+│   │   │   ├── 002 Heilig Hart
+│   │   │   │   ├── 002_Heilig_Hart.html
+│   │   │   │   ├── cover.jpg
+│   │   │   │   ├── Heilig Hart (1).jpg
+│   │   │   │   ├── Heilig Hart (2).jpg
+│   │   │   │   ├── Heilig Hart (3).jpg
+│   │   │   │   ├── Heilig Hart (4)_OPEN.jpg
+│   │   │   │   ├── Heilig Hart (5).jpg
+│   │   │   │   ├── Heilig Hart (6)_OPEN.jpg
+│   │   │   │   ├── Heilig Hart (7).jpg
+│   │   │   │   └── Heilig Hart (8).jpg
+│   │   │   ├── 003 Eeuwfeest
+│   │   │   │   ├── 003_Eeuwfeest.html
+│   │   │   │   ├── cover.jpg
+│   │   │   │   ├── Eeuwfeest (10).jpg
+│   │   │   │   ├── Eeuwfeest (11).jpg
+│   │   │   │   ├── Eeuwfeest (1).jpg
+│   │   │   │   ├── Eeuwfeest (2).jpg
+│   │   │   │   ├── Eeuwfeest (3).jpg
+│   │   │   │   ├── Eeuwfeest (4).jpg
+│   │   │   │   ├── Eeuwfeest (5).jpg
+│   │   │   │   ├── Eeuwfeest (6).jpg
+│   │   │   │   ├── Eeuwfeest (7).jpg
+│   │   │   │   ├── Eeuwfeest (8)_OPEN.jpg
+│   │   │   │   └── Eeuwfeest (9).jpg
+│   │   │   ├── 004 Pepers
+│   │   │   │   ├── 004_Pepers.html
+│   │   │   │   ├── cover.jpg
+│   │   │   │   ├── Pepers (1)_OPEN.jpg
+│   │   │   │   └── Pepers (2).jpg
+│   │   │   ├── 005 Oud dorp
+│   │   │   │   ├── 005_Oud_dorp.html
+│   │   │   │   ├── cover.jpg
+│   │   │   │   ├── Oud dorp (1)_OPEN.jpg
+│   │   │   │   ├── Oud dorp (2).jpg
+│   │   │   │   ├── Oud dorp (3).jpg
+│   │   │   │   └── Oud dorp (4).jpg
+│   │   │   ├── 006 Gunst demeyere
+│   │   │   │   └── cover.jpg
+│   │   │   ├── 007 Ringlaan Zuid
+│   │   │   │   ├── 007_Ringlaan_Zuid.html
+│   │   │   │   ├── cover.jpg
+│   │   │   │   ├── Ringlaan Zuid (3)_OPEN.jpg
+│   │   │   │   ├── Ringlaan Zuid (4).jpg
+│   │   │   │   ├── Ringlaan Zuid (5).jpg
+│   │   │   │   └── Ringlaan Zuid (6).jpg
+│   │   │   ├── 011 Urban Depot
+│   │   │   │   ├── 011_Urban_Depot.html
+│   │   │   │   ├── cover.jpg
+│   │   │   │   ├── Urban Depot (10).jpg
+│   │   │   │   ├── Urban Depot (11).jpg
+│   │   │   │   ├── Urban Depot (12).jpg
+│   │   │   │   ├── Urban Depot (13).jpg
+│   │   │   │   ├── Urban Depot (14).jpg
+│   │   │   │   ├── Urban Depot (1).jpg
+│   │   │   │   ├── Urban Depot (2).jpg
+│   │   │   │   ├── Urban Depot (3).jpg
+│   │   │   │   ├── Urban Depot (4).jpg
+│   │   │   │   ├── Urban Depot (5).jpg
+│   │   │   │   ├── Urban Depot (6).jpg
+│   │   │   │   ├── Urban Depot (7).jpg
+│   │   │   │   ├── Urban Depot (8).jpg
+│   │   │   │   └── Urban Depot (9)_OPEN.jpg
+│   │   │   ├── 012 Artstone
+│   │   │   │   └── cover.jpg
+│   │   │   ├── 013 Cementtoren
+│   │   │   │   └── cover.jpg
+│   │   │   ├── 024 SASK
+│   │   │   │   └── cover.jpg
+│   │   │   ├── arrow.png
+│   │   │   └── gro en kennis
+│   │   │       ├── cover.jpg
+│   │   │       └── Onderzoek.html
+│   │   └── spartan-cufonfonts
+│   │       ├── Spartan-Black.ttf
+│   │       ├── Spartan-Bold.ttf
+│   │       ├── Spartan-ExtraBold.ttf
+│   │       ├── Spartan-ExtraLight.ttf
+│   │       ├── Spartan-Light.ttf
+│   │       ├── Spartan-Medium.ttf
+│   │       ├── Spartan-Regular.ttf
+│   │       ├── Spartan-SemiBold.ttf
+│   │       └── Spartan-Thin.ttf
+│   ├── homepage.html
+│   ├── icon.png
+│   ├── index.html
+│   ├── landingpage.html
+│   ├── new_header2.jpg
+│   ├── new_header.jpg
+│   ├── project_1.html
+│   ├── projects.html
+│   ├── README.md
+│   ├── scriptIndex.js
+│   ├── scriptLandingpage.js
+│   ├── scriptProject.js
+│   ├── style.css
+│   ├── testing_fadeout
+│   │   ├── index.html
+│   │   ├── script.js
+│   │   └── style.css
+│   ├── testing.js
+│   └── Website tekst opmerkingen.docx
+└── vercel-testing
+    ├── README.md
+    └── src
+        ├── api
+        │   └── add-comment.js
+        ├── data
+        │   └── comments.json
+        ├── index.html
+        ├── package.json
+        ├── script.js
+        ├── style.css
+        ├── token.txt
+        └── tree_html
+            ├── gentree.py
+            ├── index.html
+            ├── output.txt
+            ├── style.css
+            ├── tree
+            └── upload.sh
+
+114 directories, 564 files

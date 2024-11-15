@@ -1,0 +1,64 @@
+"header":{
+	"build_info":{
+		"version": "0.0.1",
+		"build_id":23,
+		"timestamp":"2024_12_34",
+		"ignored_tree":"*_hidden.*"
+		},
+	"stats":{
+		"total_projects":12,
+		"total_files":333,
+		"total_size":3333,
+		"last_modified":"19_29_34"
+		},
+	"config":{
+		"config_path":"./config.yml",
+		"max_depht": 5,
+		"images":["jpg","png","gif","webp"],
+		"dir":{},
+		"content":{
+			"max_image_size_mobile": [800, 600], 
+			"image_size": [800, 600]
+		},
+		"three":{
+			"image_size":[150, 150],
+			"max_instances": 1000,
+			"grid_size": 10,
+			"spacing": 0
+			}
+],
+
+
+
+
+		"images":{
+		  "sizes":[
+			    "three":{
+			    "content":{
+						],
+		  "optimization":{
+			"jpg_quality": 85,
+			"png_compression": 9,
+			"max_file_size": 2000000
+			},
+		   "three_js":{
+			 
+		},
+
+		"github":{
+			"ignore":[".".git",".gitignore"],
+			"branch":"dev"
+		],
+	}
+
+
+
+
+
+
+
+
+
+
+
+

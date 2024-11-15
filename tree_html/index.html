@@ -1,0 +1,757 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Directory Tree</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap');
+        
+        body {
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+            font-family: 'Ubuntu Mono', monospace;
+            padding: 20px;
+            font-size: 14px;
+        }
+        .tree-line {
+            white-space: pre;
+            margin: 0;
+            line-height: 1.2;
+            height: 1.2em;
+            display: flex;
+            align-items: center;
+        }
+        .tree-structure {
+            color: rgb(255, 255, 255);
+        }
+        .tree-name {
+            margin-left: -1px;
+        }
+        details {
+            margin-left: 0;
+        }
+        summary {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            list-style: none;
+        }
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        summary::before {
+            font-family: 'Font Awesome 6 Free';
+            content: '\f105';
+            color: rgb(255, 255, 255);
+            margin-right: 4px;
+            font-size: 12px;
+            transition: transform 0.2s;
+            width: 12px;
+            font-weight: 900;
+        }
+        details[open] > summary::before {
+            content: '\f107';
+        }
+        summary:hover::before {
+            color: rgb(255, 255, 255);
+        }
+        .folder-content {
+            margin-left: 0;
+        }
+        h2 {
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Directory Tree Generated on 2024-11-14 12:28:06</h2>
+    <div class="tree-content">
+    
+<div class="tree-line"><span class="tree-structure"></span><span class="tree-name" style="color: rgb(100,100, 255)">.</span></div>
+<div class="tree-line"><span class="tree-structure">├── </span><span class="tree-name" style="color: rgb(100,100, 255)">annelottelammertse</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">dataREADME.py</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">example</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">demoproject</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">1.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">2.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">3.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">description.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">videos</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">admin_approve_project.gif</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">admin_approve_project.mp4</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">admin_remove_project.gif</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">admin_remove_project.mp4</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">admin_update_project.gif</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">admin_update_project.mp4</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">admin_upload_project.gif</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">admin_upload_project.mp4</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">user_fork_repository.gif</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">user_fork_repository.mp4</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">user_remove_project.gif</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">user_remove_project.mp4</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">user_update_project.gif</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">user_update_project.mp4</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">user_upload_project.gif</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">user_upload_project.mp4</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">website_navigation.gif</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       └── </span><span class="tree-name" style="color: rgb(255,100,255)">website_navigation.mp4</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">generateREADME.py</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">__pycache__</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   └── </span><span class="tree-name" style="color: rgb(255,255, 255)">dataREADME.cpython-310.pyc</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">README.md</span></div>
+<div class="tree-line"><span class="tree-structure">│   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">src</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">about me.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">birds nest.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">Black ash desert.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">containers.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">content</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">about me</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">description.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">DSC_0018___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">DSC_0021___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">DSC_0047___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">DSC_0058___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">birds nest</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">description.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">SHIPYARD_61___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">SHIPYARD_62___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">SHIPYARD_63___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">Black ash desert</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_246___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_251___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_255___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_257___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_259___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">description.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">containers</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">description.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Shipping_Containers__85____processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Shipping_Containers__86____processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">Shipping_Containers__87____processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">fountain</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">description.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">HOT_SPRINGS_092___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">HOT_SPRINGS_094___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">HOT_SPRINGS_095___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">greenland mountainscape</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_001___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_002___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_003___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_004___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_005___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_006___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_007___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_008___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_009___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_010___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_011___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_012___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_013___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_014___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_015___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_016___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">description.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">hot springs</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">description.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">HOT_SPRINGS_052___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">Iceland red rock</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_162___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_181___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_182___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_183___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_185___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">description.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">indiana desert</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">description.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">HOT_SPRINGS_011___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">HOT_SPRINGS_015___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">HOT_SPRINGS_027___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">HOT_SPRINGS_038___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">HOT_SPRINGS_039___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">HOT_SPRINGS_045___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">photopack</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_072___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_118___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_190___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_215___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">BLACK_ASH_DESERT_216___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">description.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">seabad</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">description.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">SHIPYARD_10___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">SHIPYARD_11___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">SHIPYARD_12___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">shipwreck</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">asd___processed.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">description.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">data.js</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">demoproject.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">extra</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">font</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Roboto-BlackItalic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Roboto-Black.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Roboto-BoldItalic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Roboto-Bold.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Roboto-Italic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Roboto-LightItalic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Roboto-Light.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Roboto-MediumItalic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Roboto-Medium.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Roboto-Regular.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Roboto-ThinItalic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Roboto-Thin.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">fountain.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">generateData.py</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">greenland mountainscape.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">hot springs.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">Iceland red rock.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">index.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">indiana desert.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">photopack.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">__pycache__</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   └── </span><span class="tree-name" style="color: rgb(255,255, 255)">staticHtmlString.cpython-310.pyc</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">script.js</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">seabad.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">shipwreck.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">staticHtmlString.py</span></div>
+<div class="tree-line"><span class="tree-structure">│       └── </span><span class="tree-name" style="color: rgb(255,255, 255)">style.css</span></div>
+<div class="tree-line"><span class="tree-structure">├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">api_PAT_token_and_file_encryption.txt</span></div>
+<div class="tree-line"><span class="tree-structure">├── </span><span class="tree-name" style="color: rgb(100,100, 255)">hildeverduyn</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">index.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">media</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">pics</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">10.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">11.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">12.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">13.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">14.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">15.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">16.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">1.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">2.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">3.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">4.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">5.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">6.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">7.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">8.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       └── </span><span class="tree-name" style="color: rgb(255,100,255)">9.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">README.md</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">src</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">content.js</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">functions.js</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   └── </span><span class="tree-name" style="color: rgb(255,255, 255)">script.js</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">style</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">1.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">Cormorant_Garamond</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">CormorantGaramond-BoldItalic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">CormorantGaramond-Bold.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">CormorantGaramond-Italic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">CormorantGaramond-LightItalic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">CormorantGaramond-Light.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">CormorantGaramond-MediumItalic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">CormorantGaramond-Medium.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">CormorantGaramond-Regular.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">CormorantGaramond-SemiBoldItalic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">CormorantGaramond-SemiBold.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">OFL.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">CormorantGaramond-Regular.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255, 0, 0)">f.zip</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">Jacquarda_Bastarda_9_Charted</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">OFL.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">JacquardaBastarda9Charted-Regular.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">Jersey_15_Charted</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Jersey15Charted-Regular.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">OFL.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Jersey15Charted-Regular.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">Micro_5_Charted</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Micro5Charted-Regular.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">OFL.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Micro5Charted-Regular.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">OFL.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">Schibsted_Grotesk</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">OFL.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">README.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">SchibstedGrotesk-Italic-VariableFont_wght.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">SchibstedGrotesk-VariableFont_wght.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">static</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">SchibstedGrotesk-BlackItalic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">SchibstedGrotesk-Black.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">SchibstedGrotesk-BoldItalic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">SchibstedGrotesk-Bold.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">SchibstedGrotesk-ExtraBoldItalic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">SchibstedGrotesk-ExtraBold.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">SchibstedGrotesk-Italic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">SchibstedGrotesk-MediumItalic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">SchibstedGrotesk-Medium.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">SchibstedGrotesk-Regular.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">SchibstedGrotesk-SemiBoldItalic.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">SchibstedGrotesk-SemiBold.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   └── </span><span class="tree-name" style="color: rgb(255,255, 255)">style.css</span></div>
+<div class="tree-line"><span class="tree-structure">│   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">todo</span></div>
+<div class="tree-line"><span class="tree-structure">├── </span><span class="tree-name" style="color: rgb(100,100, 255)">houdini-eclecticism</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">corneel_collab</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">v1</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       └── </span><span class="tree-name" style="color: rgb(100,100, 255)">factory</span></div>
+<div class="tree-line"><span class="tree-structure">│   │           └── </span><span class="tree-name" style="color: rgb(255,255, 255)">factory_recovered.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">counter.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">david Kahl JSON</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">backup</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">extract and use JSON_bak10.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">extract and use JSON_bak11.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">extract and use JSON_bak12.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">extract and use JSON_bak1.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">extract and use JSON_bak2.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">extract and use JSON_bak3.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">extract and use JSON_bak4.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">extract and use JSON_bak5.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">extract and use JSON_bak6.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">extract and use JSON_bak7.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">extract and use JSON_bak8.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   └── </span><span class="tree-name" style="color: rgb(255,255, 255)">extract and use JSON_bak9.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">extract and use JSON.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">index.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">learning python in houdini examples.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">RENDER</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">ageGuesser_axelle_4.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">ageGuesser_hilde_0.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">ageGuesser_inne_2.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">ageGuesser_johan_1.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">ageGuesser_joris_3.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">test.json</span></div>
+<div class="tree-line"><span class="tree-structure">│   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">pymeshlab</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">backup</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   └── </span><span class="tree-name" style="color: rgb(255,255, 255)">meshlab_animation_bak1.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">data</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">import subprocess.py</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">make_animation.py</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">myconfig.py</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   └── </span><span class="tree-name" style="color: rgb(0, 255, 0)">run.bat</span></div>
+<div class="tree-line"><span class="tree-structure">│       └── </span><span class="tree-name" style="color: rgb(255,255, 255)">meshlab_animation.hiplc</span></div>
+<div class="tree-line"><span class="tree-structure">├── </span><span class="tree-name" style="color: rgb(100,100, 255)">houdini_to_pure_data_over_TCP</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">media</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">TCP_puredata.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">patch_terminal.pd</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">README.md</span></div>
+<div class="tree-line"><span class="tree-structure">│   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">send_data_to_puredata_over_tcp.hipnc</span></div>
+<div class="tree-line"><span class="tree-structure">├── </span><span class="tree-name" style="color: rgb(100,100, 255)">kinesis</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(0, 255, 0)">adjust_brightness.sh</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(0, 255, 0)">find_last_wrangle.sh</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(0, 255, 0)">kinesis_mouse_mode.sh</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">README.md</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(0, 255, 0)">set_typingspeed.sh</span></div>
+<div class="tree-line"><span class="tree-structure">│   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">smartset_firmware</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">firmware</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">Adv360_1.0.9_update.upd</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">default.upd</span></div>
+<div class="tree-line"><span class="tree-structure">│       └── </span><span class="tree-name" style="color: rgb(100,100, 255)">layouts</span></div>
+<div class="tree-line"><span class="tree-structure">│           ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">layout1.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│           ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">layout2.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│           ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">layout3.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│           ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">layout4.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│           ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">layout5.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│           ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">layout6.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│           ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">layout7.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│           ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">layout8.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│           └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">layout9.txt</span></div>
+<div class="tree-line"><span class="tree-structure">├── </span><span class="tree-name" style="color: rgb(100,100, 255)">liselottevroman</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">README.md</span></div>
+<div class="tree-line"><span class="tree-structure">│   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">src</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">content</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">about</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">eveline</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">a.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">DESCRIPTION.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">header.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">frank</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">DESCRIPTION.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">header.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │       └── </span><span class="tree-name" style="color: rgb(255,100,255)">s.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">articles</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">article_drawing</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">DESCRIPTION.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">header.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">IMG_5627-reduced-768x1024.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">IMG_9711-768x576.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">drawing</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">DESCRIPTION.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">header.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">IMG_5627-reduced-768x1024.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │       └── </span><span class="tree-name" style="color: rgb(255,100,255)">IMG_9752-768x576.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">projects</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">brick</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">DESCRIPTION.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">header.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">IMG_9711-768x576.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">IMG_9752-768x576.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">foundation</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">DESCRIPTION.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">header.jpeg</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">header.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   │       └── </span><span class="tree-name" style="color: rgb(255,100,255)">IMG_5627-reduced-768x1024.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">workshops</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">ciry</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       │   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">DESCRIPTION.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">header.png</span></div>
+<div class="tree-line"><span class="tree-structure">│       │       └── </span><span class="tree-name" style="color: rgb(100,100, 255)">thoughts on sketching while walking the dog</span></div>
+<div class="tree-line"><span class="tree-structure">│       │           ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">DESCRIPTION.txt</span></div>
+<div class="tree-line"><span class="tree-structure">│       │           ├── </span><span class="tree-name" style="color: rgb(255,100,255)">header.jpeg</span></div>
+<div class="tree-line"><span class="tree-structure">│       │           └── </span><span class="tree-name" style="color: rgb(255,100,255)">IMG_5627-reduced-768x1024.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">data.js</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">index.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">pages</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">article_drawing.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">article_drawing-intro.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">brick.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">brick-intro.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">ciry.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">ciry-intro.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">drawing.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">drawing-intro.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">eveline.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">eveline-intro.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">foundation.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">foundation-intro.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">frank.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">frank-intro.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">thoughts on sketching while walking the dog.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       │   └── </span><span class="tree-name" style="color: rgb(255,255, 255)">thoughts on sketching while walking the dog-intro.html</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">produceData.py</span></div>
+<div class="tree-line"><span class="tree-structure">│       ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">script.js</span></div>
+<div class="tree-line"><span class="tree-structure">│       └── </span><span class="tree-name" style="color: rgb(255,255, 255)">style.css</span></div>
+<div class="tree-line"><span class="tree-structure">├── </span><span class="tree-name" style="color: rgb(100,100, 255)">sttudio</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">\</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">1b.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">about.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">b1e91224-6d52-4417-b025-be0ab68ea390</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">ba70fe79-5362-46c4-90a3-820904475fc0</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255, 0, 0)">backup_4_04_2024.zip</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">contact.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">data</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">1c.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">contact</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">contact_plan.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">instagram_logo_bw.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">linkedin_logo_bw.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">landingpage</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">omgeving</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">1.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">20230116_STTUDIO_axo lijn site.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">onderzoek</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">1.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">2.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">Voorstelling afbeeldingen.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">ontwerp</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">1.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">2.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">D5_Image_20220927_171253.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       └── </span><span class="tree-name" style="color: rgb(255,100,255)">Voorstelling afbeeldingen3.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">projects</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">001 Apollo XI</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">001_Apollo_XI.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (10).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (11).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (12).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (13).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (14).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (15).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (16).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (17).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (18).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (19).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (1).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (20).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (2).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (3).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (4).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (5).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (6)_OPEN.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (7).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (8).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (9).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">002 Heilig Hart</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">002_Heilig_Hart.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Heilig Hart (1).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Heilig Hart (2).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Heilig Hart (3).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Heilig Hart (4)_OPEN.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Heilig Hart (5).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Heilig Hart (6)_OPEN.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Heilig Hart (7).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">Heilig Hart (8).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">003 Eeuwfeest</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">003_Eeuwfeest.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (10).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (11).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (1).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (2).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (3).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (4).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (5).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (6).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (7).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (8)_OPEN.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (9).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">004 Pepers</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">004_Pepers.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Pepers (1)_OPEN.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">Pepers (2).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">005 Oud dorp</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">005_Oud_dorp.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Oud dorp (1)_OPEN.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Oud dorp (2).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Oud dorp (3).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">Oud dorp (4).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">006 Gunst demeyere</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">007 Ringlaan Zuid</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">007_Ringlaan_Zuid.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Ringlaan Zuid (3)_OPEN.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Ringlaan Zuid (4).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Ringlaan Zuid (5).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">Ringlaan Zuid (6).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">011 Urban Depot</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">011_Urban_Depot.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (10).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (11).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (12).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (13).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (14).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (1).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (2).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (3).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (4).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (5).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (6).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (7).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (8).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (9)_OPEN.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">012 Artstone</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">013 Cementtoren</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">024 SASK</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">arrow.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">gro en kennis</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       └── </span><span class="tree-name" style="color: rgb(255,255, 255)">Onderzoek.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">spartan-cufonfonts</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-Black.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-Bold.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-ExtraBold.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-ExtraLight.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-Light.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-Medium.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-Regular.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-SemiBold.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-Thin.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">homepage.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">icon.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">index.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">landingpage.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">new_header2.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">new_header.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">project_1.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">projects.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">README.md</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">scriptIndex.js</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">scriptLandingpage.js</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">scriptProject.js</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">style.css</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">testing_fadeout</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">index.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">script.js</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   └── </span><span class="tree-name" style="color: rgb(255,255, 255)">style.css</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">testing.js</span></div>
+<div class="tree-line"><span class="tree-structure">│   └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Website tekst opmerkingen.docx</span></div>
+<div class="tree-line"><span class="tree-structure">├── </span><span class="tree-name" style="color: rgb(100,100, 255)">sttudio_backup</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">\</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">1b.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">about.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">b1e91224-6d52-4417-b025-be0ab68ea390</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">ba70fe79-5362-46c4-90a3-820904475fc0</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255, 0, 0)">backup_4_04_2024.zip</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">contact.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">data</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">1c.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">contact</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">contact_plan.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">instagram_logo_bw.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">linkedin_logo_bw.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">landingpage</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">omgeving</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">1.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">20230116_STTUDIO_axo lijn site.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">onderzoek</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">1.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">2.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">Voorstelling afbeeldingen.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">ontwerp</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">1.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">2.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">D5_Image_20220927_171253.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       └── </span><span class="tree-name" style="color: rgb(255,100,255)">Voorstelling afbeeldingen3.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">projects</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">001 Apollo XI</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">001_Apollo_XI.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (10).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (11).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (12).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (13).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (14).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (15).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (16).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (17).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (18).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (19).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (1).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (20).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (2).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (3).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (4).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (5).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (6)_OPEN.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (7).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (8).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Apollo XI (9).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">002 Heilig Hart</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">002_Heilig_Hart.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Heilig Hart (1).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Heilig Hart (2).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Heilig Hart (3).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Heilig Hart (4)_OPEN.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Heilig Hart (5).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Heilig Hart (6)_OPEN.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Heilig Hart (7).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">Heilig Hart (8).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">003 Eeuwfeest</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">003_Eeuwfeest.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (10).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (11).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (1).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (2).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (3).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (4).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (5).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (6).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (7).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (8)_OPEN.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">Eeuwfeest (9).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">004 Pepers</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">004_Pepers.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Pepers (1)_OPEN.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">Pepers (2).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">005 Oud dorp</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">005_Oud_dorp.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Oud dorp (1)_OPEN.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Oud dorp (2).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Oud dorp (3).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">Oud dorp (4).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">006 Gunst demeyere</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">007 Ringlaan Zuid</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">007_Ringlaan_Zuid.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Ringlaan Zuid (3)_OPEN.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Ringlaan Zuid (4).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Ringlaan Zuid (5).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">Ringlaan Zuid (6).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">011 Urban Depot</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">011_Urban_Depot.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (10).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (11).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (12).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (13).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (14).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (1).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (2).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (3).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (4).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (5).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (6).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (7).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (8).jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">Urban Depot (9)_OPEN.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">012 Artstone</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">013 Cementtoren</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">024 SASK</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   │   └── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">arrow.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">gro en kennis</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       ├── </span><span class="tree-name" style="color: rgb(255,100,255)">cover.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   │       └── </span><span class="tree-name" style="color: rgb(255,255, 255)">Onderzoek.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   └── </span><span class="tree-name" style="color: rgb(100,100, 255)">spartan-cufonfonts</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-Black.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-Bold.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-ExtraBold.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-ExtraLight.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-Light.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-Medium.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-Regular.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-SemiBold.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   │       └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Spartan-Thin.ttf</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">homepage.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">icon.png</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">index.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">landingpage.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">new_header2.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,100,255)">new_header.jpg</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">project_1.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">projects.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">README.md</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">scriptIndex.js</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">scriptLandingpage.js</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">scriptProject.js</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">style.css</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">testing_fadeout</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">index.html</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">script.js</span></div>
+<div class="tree-line"><span class="tree-structure">│   │   └── </span><span class="tree-name" style="color: rgb(255,255, 255)">style.css</span></div>
+<div class="tree-line"><span class="tree-structure">│   ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">testing.js</span></div>
+<div class="tree-line"><span class="tree-structure">│   └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">Website tekst opmerkingen.docx</span></div>
+<div class="tree-line"><span class="tree-structure">└── </span><span class="tree-name" style="color: rgb(100,100, 255)">vercel-testing</span></div>
+<div class="tree-line"><span class="tree-structure">    ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">README.md</span></div>
+<div class="tree-line"><span class="tree-structure">    └── </span><span class="tree-name" style="color: rgb(100,100, 255)">src</span></div>
+<div class="tree-line"><span class="tree-structure">        ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">api</span></div>
+<div class="tree-line"><span class="tree-structure">        │   └── </span><span class="tree-name" style="color: rgb(255,255, 255)">add-comment.js</span></div>
+<div class="tree-line"><span class="tree-structure">        ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">data</span></div>
+<div class="tree-line"><span class="tree-structure">        │   └── </span><span class="tree-name" style="color: rgb(255, 255, 255)">comments.json</span></div>
+<div class="tree-line"><span class="tree-structure">        ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">index.html</span></div>
+<div class="tree-line"><span class="tree-structure">        ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">package.json</span></div>
+<div class="tree-line"><span class="tree-structure">        ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">script.js</span></div>
+<div class="tree-line"><span class="tree-structure">        ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">style.css</span></div>
+<div class="tree-line"><span class="tree-structure">        ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">token.txt</span></div>
+<div class="tree-line"><span class="tree-structure">        └── </span><span class="tree-name" style="color: rgb(100,100, 255)">tree_html</span></div>
+<div class="tree-line"><span class="tree-structure">            ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">gentree.py</span></div>
+<div class="tree-line"><span class="tree-structure">            ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">index.html</span></div>
+<div class="tree-line"><span class="tree-structure">            ├── </span><span class="tree-name" style="color: rgb(255, 255, 255)">output.txt</span></div>
+<div class="tree-line"><span class="tree-structure">            ├── </span><span class="tree-name" style="color: rgb(255,255, 255)">style.css</span></div>
+<div class="tree-line"><span class="tree-structure">            ├── </span><span class="tree-name" style="color: rgb(100,100, 255)">tree</span></div>
+<div class="tree-line"><span class="tree-structure">            └── </span><span class="tree-name" style="color: rgb(0, 255, 0)">upload.sh</span></div>
+<div class="tree-line"><span class="tree-structure"></span><span class="tree-name" style="color: rgb(100,100, 255)">114 directories, 564 files</span></div>
+
+    </div>
+</body>
+</html>
+    

@@ -1,0 +1,85 @@
+{
+  "comments": [
+    {
+      "text": "hi there",
+      "timestamp": "2024-11-15T11:06:01.909Z",
+      "location": "Bangkok, Thailand",
+      "coordinates": {
+        "x": 1032,
+        "y": 390
+      }
+    },
+    {
+      "text": "ssd",
+      "timestamp": "2024-11-13T15:05:12.871Z",
+      "location": "Bangkok, Thailand",
+      "coordinates": {
+        "x": 348,
+        "y": 433
+      }
+    },
+    {
+      "text": "gvgcv",
+      "timestamp": "2024-11-13T15:02:09.366Z",
+      "location": "Bangkok, Thailand",
+      "coordinates": {
+        "x": 511,
+        "y": 358
+      }
+    },
+    {
+      "text": "tetette",
+      "timestamp": "2024-11-13T14:55:21.819Z",
+      "location": "Bangkok, Thailand",
+      "coordinates": {
+        "x": 317,
+        "y": 473
+      }
+    },
+    {
+      "text": "ddd",
+      "timestamp": "2024-11-13T11:16:01.476Z",
+      "location": "Bangkok, Thailand",
+      "coordinates": {
+        "x": 601,
+        "y": 407
+      }
+    },
+    {
+      "text": "woow",
+      "timestamp": "2024-11-13T11:15:08.293Z",
+      "location": "Bangkok, Thailand",
+      "coordinates": {
+        "x": 1008,
+        "y": 719
+      }
+    },
+    {
+      "text": "ugly as fuck",
+      "timestamp": "2024-11-13T11:15:00.346Z",
+      "location": "Bangkok, Thailand",
+      "coordinates": {
+        "x": 503,
+        "y": 571
+      }
+    },
+    {
+      "text": "so nice",
+      "timestamp": "2024-11-13T11:14:40.353Z",
+      "location": "Bangkok, Thailand",
+      "coordinates": {
+        "x": 1427,
+        "y": 527
+      }
+    },
+    {
+      "text": "nice model",
+      "timestamp": "2024-11-13T11:14:29.266Z",
+      "location": "Bangkok, Thailand",
+      "coordinates": {
+        "x": 934,
+        "y": 733
+      }
+    }
+  ]
+}
