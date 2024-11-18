@@ -1,0 +1,80 @@
+# File Configuration > initial parms
+info:
+  version: "alpha"
+
+files:
+  max_depth: 5
+  allowed_extensions:
+    - jpg
+    - png
+    - gif
+    - txt
+    - sh
+    - py
+    - obj
+    - html 
+    - js 
+    - json 
+    - yml 
+  ignore_patterns:
+    - "_"
+    - "."
+  text_files_to_images: true
+  folder_names_to_images: true
+
+# Display Settings > initial parms
+display:
+  sort:
+    - date
+    - size
+    - user
+  mobile:
+    switch_to_mobile_when: "50%"
+    show_dir_tree: true
+    show_html_content: true
+    show_theejs_scene: true
+
+# Path Configuration  > initial parms
+paths:
+  config: "./config.yml"
+  src: "src"
+  logs: "logs"
+
+# Media Settings  > initial parms
+media:
+  image_quality: 85
+  html_content:
+    dimensions:
+      desktop: [800, 600]
+      mobile: [800, 600]
+    paths:
+      desktop_path: "processed"
+      mobile_path: "processed"
+  threejs_scene:
+    dimensions:
+      desktop: [800, 600]
+      mobile: [800, 600]
+    paths:
+      desktop_path: "processed"
+      mobile_path: "processed"
+
+# Directory Tree Configuration  > initial parms
+dir_tree: {}
+
+# HTML Content Configuration > initial parms
+html_content: {}
+
+# Three.js Scene Configuration > initial parms
+threejs_scene:
+  appearance:
+    transparency_color: "black"
+  render:
+    show_foldernames_as_images: true
+    show_textfils_as_images: true
+    show_comment_tags: true
+    show_stack_tags: true
+  performance:
+    max_instances: 1000
+    grid_size: 10
+    spacing: 0
+

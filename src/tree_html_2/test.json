@@ -1,0 +1,172 @@
+{
+	"header": {
+		"tree": [
+			"root/",
+			"├── README.md                 (1.0 KB)",
+			"├── src/",
+			"│   └── api/",
+			"│       └── add-comment.js    (2.0 KB)",
+			"└── upload.sh               (512 B)"
+		],
+		"info": {
+			"version": "0.0.1",
+			"build_id": 23,
+			"timestamp": "2024_03_17",
+			"git_branch": "dev"
+		},
+		"stats": {
+			"total_projects": 12,
+			"total_files": 333,
+			"total_folders": 79,
+			"total_size": 3333,
+			"last_modified": "19_29_34"
+		},
+		"config": {
+			"files": {
+				"max_depth": 5,
+				"allowed_extensions": ["jpg", "png", "gif", "txt", "sh", "py", "obj"],
+				"ignore_patterns": ["*hidden.*", "_", ".", ".git", ".gitignore"],
+				"text_files_to_images": true,
+				"folder_names_to_images": true
+			},
+			"display": {
+				"modes": ["only_directory", "all_files"],
+				"sort_options": ["date", "size", "user"],
+				"mobile": {
+					"threshold": "50%",
+					"show_dir_tree": true,
+					"show_html_content": true,
+					"show_threejs_scene": true
+				}
+			},
+			"paths": {
+				"config": "./config.yml",
+				"src": "src",
+				"logs": "logs"
+			},
+			"media": {
+				"image_quality": 85,
+					"html_content": {
+						"dimensions": {
+							"desktop": [800, 600],
+							"mobile": [800, 600]
+						},
+						"paths": { 
+							"desktop_path": "processed",
+							"mobile_path": "processed"
+							}
+						},
+					"threejs_scene": {
+						"dimensions": {
+							"desktop": [800, 600],
+							"mobile": [800, 600]
+						},
+						"paths": { 
+							"desktop_path": "processed",
+							"mobile_path": "processed"
+							}
+						}
+					}
+				}
+			},
+			"html_content": {},
+			"threejs_scene": {
+				"appearance": {
+					"transparency_color": "black"
+				},
+				"render": {
+					"show_foldernames_as_images": true,
+					"show_textfiles_as_images": true,
+					"show_comment_tags": true,
+					"show_stack_tags": true
+				},
+				"performance": {
+					"max_instances": 1000,
+					"grid_size": 10,
+					"spacing": 0
+				}
+			}
+		}
+	},
+
+
+"structure":{	"root": {
+		"name": "root",
+		"type": "directory",
+		"html_path": "/root/README.html",
+		"folder_metadata": {
+			"child_count": 4,
+			"size": 2000,
+			"created": "2024-11-17T12:00:00Z",
+			"modified": "2024-11-17T12:00:00Z"
+		},
+		"content": {
+			"directory_tree": {},
+			"html_content": {
+				"custom_html": true,
+				"html_path": "/root/index.html"
+			},
+			"scene": {
+				"images": [],
+				"annotations": {
+					"stack": [],
+					"comments": []
+				}
+			}
+		},
+		"children": {
+			"README.md": {
+				"name": "README.md",
+				"type": "file",
+				"file_type": "markdown",
+				"html_path": "/root/README.html",
+				"file_metadata": {
+					"id": 0,
+					"size": 1024,
+					"created": "2024-11-17T12:00:00Z",
+					"modified": "2024-11-17T12:00:00Z"
+				},
+				"content": {
+					"directory_tree": {},
+					"html_content": {
+						"custom_html": false,
+						"html_path": "/root/README.html"
+					},
+					"scene": {
+						"images": [],
+						"annotations": {
+							"stack": [],
+							"comments": []
+						}
+					}
+				}
+			},
+			"src": {
+				"name": "src",
+				"type": "directory",
+				"html_path": "/root/src/index.html",
+				"folder_metadata": {
+					"id": 1,
+					"child_count": 2,
+					"size": 4096,
+					"created": "2024-11-17T12:00:00Z",
+					"modified": "2024-11-17T12:00:00Z"
+				},
+				"children": {
+					"api": {
+						"name": "api",
+						"type": "directory",
+						"html_path": "/root/src/api/index.html",
+						"folder_metadata": {
+							"id": 0,
+							"child_count": 1,
+							"size": 2048,
+							"created": "2024-11-17T12:00:00Z",
+							"modified": "2024-11-17T12:00:00Z"
+						}
+					}
+				}
+			}
+		}
+	}
+}}
