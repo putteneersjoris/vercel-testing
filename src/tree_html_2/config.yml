@@ -3,6 +3,7 @@ info:
   version: "alpha"
 
 files:
+  filename: "filestructure.json"
   max_depth: 5
   allowed_extensions:
     - jpg
@@ -17,8 +18,8 @@ files:
     - json 
     - yml 
   ignore_patterns:
-    - "_"
-    - "."
+    - "_*"
+    - ".*"
   text_files_to_images: true
   folder_names_to_images: true
 
@@ -36,8 +37,8 @@ display:
 
 # Path Configuration  > initial parms
 paths:
-  config: "./config.yml"
-  src: "src"
+  config: "config.yml"
+  root: "./"
   logs: "logs"
 
 # Media Settings  > initial parms
@@ -77,4 +78,61 @@ threejs_scene:
     max_instances: 1000
     grid_size: 10
     spacing: 0
+
+
+#./
+#│
+#├── .git/
+#├── .github/
+#│   └── workflows/
+#│       ├── build.yml
+#│       └── deploy.yml
+#│
+#├── .gitignore
+#├── src/
+#│   ├── scripts/
+#│   │   ├── py/
+#│   │   │   ├── gen_header.py
+#│   │   │   ├── gen_content.py
+#│   │   │   ├── gen_structure.py
+#│   │   │   ├── img_resize.py
+#│   │   │   ├── img_grid.py
+#│   │   │   ├── img_text.py
+#│   │   │   ├── tree_builder.py
+#│   │   │   ├── utils_files.py
+#│   │   │   ├── utils_validate.py
+#│   │   │   └── main.py
+#│   │   │
+#│   │   ├── js/
+#│   │   │   ├── main.js
+#│   │   │   ├── grid.js
+#│   │   │   └── image-loader.js
+#│   │   │
+#│   │   ├── styles/
+#│   │   │   ├── main.css
+#│   │   │   └── grid.css
+#│   │   │
+#│   │   ├── logs/
+#│   │   │   ├── generator.log
+#│   │   │   └── errors.log
+#│   │   │
+#│   │   ├── data.json
+#│   │   ├── settings.yml
+#│   │   └── index.html
+#│   │
+#│   └── archigrad.io/
+#│       ├── project_1/
+#│       ├── project_2/
+#│       ├── project_3/
+#│       └── project_4/
+#│
+#└── README.md
+#
+#
+#
+#
+#
+#
+#
+#
 

@@ -24,6 +24,7 @@
 		"config": {
 			"files": {
 				"max_depth": 5,
+				
 				"allowed_extensions": ["jpg", "png", "gif", "txt", "sh", "py", ".obj"],
 				"ignore_patterns": ["*hidden.*", "_", ".", ".git", ".gitignore"],
 				"text_files_to_images": true,

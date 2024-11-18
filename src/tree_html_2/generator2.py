@@ -62,89 +62,135 @@ def get_file_tree(start_path):
         print(f"Error generating file tree: {e}")
         return ["root/"]
 
-def get_directory_stats(start_path, max_depth, allowed_extensions, ignore_patterns):
-    """Calculate directory statistics."""
-    total_files = 0
-    total_folders = 0
-    total_size = 0
-    last_modified = None
+
+
+def get_directory_stats(start_path, max_depth, allowed_extensions, ignore_patterns, log_dir):
+    """Calculate directory statistics with detailed logging."""
+    # Ensure logs directory exists
+    ensure_directory_exists(log_dir)
     
-    print(f"\nStarting directory scan at: {start_path}")
-    print(f"Max depth: {max_depth}")
-    print(f"Allowed extensions: {allowed_extensions}")
-    print(f"Ignore patterns: {ignore_patterns}")
+    # Setup stats logging
+    log_file = os.path.join(log_dir, 'stats_log.txt')
+    with open(log_file, 'w') as log:
+        def log_write(message):
+            log.write(f"{message}\n")
+            print(message)  # Also print to console
 
-    # Convert allowed_extensions to lowercase for case-insensitive comparison
-    allowed_extensions = [ext.lower() for ext in allowed_extensions]
-    
-    for root, dirs, files in os.walk(start_path):
-        # Calculate current depth
-        rel_path = os.path.relpath(root, start_path)
-        current_depth = len(rel_path.split(os.sep)) if rel_path != '.' else 0
+        total_files = 0
+        total_folders = 0
+        total_size = 0
+        last_modified = None        
+        log_write("\n=== INITIAL PARAMETERS ===")
+        log_write(f"Start path: {start_path}")
+        log_write(f"Max depth: {max_depth}")
+        log_write(f"Allowed extensions: {allowed_extensions}")
+        log_write(f"Ignore patterns: {ignore_patterns}")
+
+        # Normalize allowed extensions
+        allowed_extensions = [ext.lower().lstrip('.') for ext in allowed_extensions]
+        log_write(f"Normalized allowed extensions: {allowed_extensions}")
         
-        print(f"\nProcessing directory: {root}")
-        print(f"Current depth: {current_depth}")
-
-        # Skip if we're too deep
-        if current_depth > max_depth:
-            print(f"Skipping - exceeded max depth {max_depth}")
-            dirs.clear()  # Don't traverse deeper
-            continue
-
-        # Filter out ignored directories before counting
-        dirs[:] = [d for d in dirs if not any(
-            ignore_pat.replace('*', '') in d
-            for ignore_pat in ignore_patterns
-        )]
+        def should_ignore(name, patterns):
+            """Check if a file or directory name should be ignored based on patterns."""
+            for pattern in patterns:
+                if pattern.startswith('*') and pattern.endswith('*'):
+                    # Pattern like "*hidden*" - check if substring exists
+                    if pattern[1:-1] in name:
+                        return True
+                elif pattern.startswith('*'):
+                    # Pattern like "*hidden" - check suffix
+                    if name.endswith(pattern[1:]):
+                        return True
+                elif pattern.endswith('*'):
+                    # Pattern like ".*" or "_*" - check prefix
+                    if name.startswith(pattern[:-1]):
+                        return True
+                else:
+                    # Exact match
+                    if name == pattern:
+                        return True
+            return False
         
-        # Count folders after filtering
-        total_folders += len(dirs)
-        print(f"Added {len(dirs)} folders to count")
-        print(f"Current folders: {dirs}")
-
-        # Process files
-        for file in files:
-            # Get the lowercase extension (including the dot)
-            file_ext = os.path.splitext(file)[1].lower()
+        log_write("\n=== STARTING DIRECTORY SCAN ===")
+        
+        for root, dirs, files in os.walk(start_path):
+            # Calculate depth
+            rel_path = os.path.relpath(root, start_path)
+            current_depth = len(Path(rel_path).parts) if rel_path != '.' else 0
             
-            # Skip files that match ignore patterns
-            if any(ignore_pat.replace('*', '') in file for ignore_pat in ignore_patterns):
-                print(f"Skipping ignored file: {file}")
+            log_write(f"\n--- Processing Directory ---")
+            log_write(f"Current directory: {root}")
+            log_write(f"Depth: {current_depth}")
+            log_write(f"Original dirs found: {dirs}")
+            log_write(f"Original files found: {files}")
+
+            # Check depth
+            if current_depth > max_depth:
+                log_write(f"Skipping - exceeded max depth {max_depth}")
+                dirs.clear()
                 continue
 
-            # Check if file extension is allowed (with and without dot)
-            if not (file_ext in allowed_extensions or file_ext[1:] in allowed_extensions):
-                print(f"Skipping file with unallowed extension: {file} (ext: {file_ext})")
-                continue
+            # Process directories
+            original_dirs = dirs.copy()
+            dirs[:] = [d for d in dirs if not should_ignore(d, ignore_patterns)]
+            filtered_dirs = set(original_dirs) - set(dirs)
+            
+            log_write("\n-- Directory Processing --")
+            log_write(f"Filtered out directories: {filtered_dirs}")
+            log_write(f"Remaining directories: {dirs}")
+            
+            total_folders += len(dirs)
+            log_write(f"Added {len(dirs)} to folder count. New total: {total_folders}")
 
-            file_path = os.path.join(root, file)
-            try:
-                # Get file stats
-                file_stat = os.stat(file_path)
-                total_files += 1
-                total_size += file_stat.st_size
+            # Process files
+            log_write("\n-- File Processing --")
+            for file in files:
+                log_write(f"\nChecking file: {file}")
                 
-                # Update last modified time if newer
-                if last_modified is None or file_stat.st_mtime > last_modified:
-                    last_modified = file_stat.st_mtime
+                # Check ignore patterns
+                if should_ignore(file, ignore_patterns):
+                    log_write(f"Skipping - matches ignore pattern: {file}")
+                    continue
+
+                # Check extension
+                ext = os.path.splitext(file)[1].lower().lstrip('.')
+                log_write(f"File extension: {ext}")
+                log_write(f"Checking against allowed extensions: {allowed_extensions}")
                 
-                print(f"Processed file: {file} (size: {file_stat.st_size})")
-            except OSError as e:
-                print(f"Error processing file {file}: {e}")
-                continue
+                if ext in allowed_extensions:
+                    file_path = os.path.join(root, file)
+                    try:
+                        file_stat = os.stat(file_path)
+                        file_size = file_stat.st_size
+                        total_files += 1
+                        total_size += file_size
+                        
+                        if last_modified is None or file_stat.st_mtime > last_modified:
+                            last_modified = file_stat.st_mtime
+                        
+                        log_write(f"COUNTED: {file}")
+                        log_write(f"Size: {file_size} bytes")
+                        log_write(f"Running totals - Files: {total_files}, Size: {total_size}")
+                    except OSError as e:
+                        log_write(f"Error processing file {file}: {e}")
+                        continue
+                else:
+                    log_write(f"Skipping - extension not allowed: {file}")
 
-    print("\nFinal Statistics:")
-    print(f"Total files: {total_files}")
-    print(f"Total folders: {total_folders}")
-    print(f"Total size: {total_size}")
-    print(f"Last modified: {time.strftime('%H_%M_%S', time.localtime(last_modified)) if last_modified else '00_00_00'}")
+        log_write("\n=== FINAL STATISTICS ===")
+        log_write(f"Total files: {total_files}")
+        log_write(f"Total folders: {total_folders}")
+        log_write(f"Total size: {total_size}")
+        log_write(f"Last modified: {time.strftime('%H_%M_%S', time.localtime(last_modified)) if last_modified else '00_00_00'}")
 
-    return {
-        "total_files": total_files,
-        "total_folders": total_folders,
-        "total_size": total_size,
-        "last_modified": time.strftime("%H_%M_%S", time.localtime(last_modified)) if last_modified else "00_00_00"
-    }
+        return {
+            "total_files": total_files,
+            "total_folders": total_folders,
+            "total_size": total_size,
+            "last_modified": time.strftime('%H_%M_%S', time.localtime(last_modified)) if last_modified else "00_00_00"
+        }
+
+
 
 def get_formatted_datetime():
     """Get current date and time in separate formats."""
@@ -154,32 +200,82 @@ def get_formatted_datetime():
         "timestamp": now.strftime("%H_%M_%S")
     }
 
-def main():
-    current_dir = os.getcwd()
-    data_file = Path("data.json")
-    
-    # Get new build ID
-    build_id = increment_build_id()
-    print(f"Incrementing build ID to: {build_id}")
-    
-    # Read config.yml
+def read_config():
+    """Read and parse config.yml file."""
     try:
         with open("config.yml", 'r') as file:
             config_data = yaml.safe_load(file)
+            print("Successfully loaded config.yml")
+            return config_data
     except Exception as e:
         print(f"Error reading config.yml: {e}")
+        return None
+
+
+
+def ensure_directory_exists(path):
+    """Create directory if it doesn't exist."""
+    if not os.path.exists(path):
+        os.makedirs(path)
+        print(f"Created directory: {path}")
+
+def read_config(config_path):
+    """Read and parse config file from specified path."""
+    try:
+        with open(config_path, 'r') as file:
+            config_data = yaml.safe_load(file)
+            print(f"Successfully loaded {config_path}")
+            return config_data
+    except Exception as e:
+        print(f"Error reading {config_path}: {e}")
+        return None
+
+def write_file_structure(data, config):
+    """Write the file structure data to JSON file specified in config."""
+    filename = config["files"].get("filename", "data.json")
+    # Use root path from config
+    root_path = config["paths"]["root"]
+    full_path = os.path.join(root_path, filename)
+    
+    try:
+        with open(full_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent='\t', ensure_ascii=False)
+        print(f"Successfully generated {full_path}")
+    except Exception as e:
+        print(f"Error writing to {full_path}: {e}")
+
+
+
+
+
+def main():
+    # Get initial config path from command line or use default
+    initial_config_path = "config.yml"
+    
+    # Read initial configuration to get actual paths
+    initial_config = read_config(initial_config_path)
+    if not initial_config:
         return
 
-    # Get version from config file or use default
+    # Get actual config path and other directories
+    root_path = initial_config["paths"]["root"]
+    config_path = os.path.join(root_path, initial_config["paths"]["config"])
+    logs_path = os.path.join(root_path, initial_config["paths"]["logs"])
+    
+    # Ensure logs directory exists
+    ensure_directory_exists(logs_path)
+    
+    # Read full configuration from actual config path
+    config_data = read_config(config_path)
+    if not config_data:
+        return
+    
+    # Get new build ID and other data
+    build_id = increment_build_id()
     version = config_data.get("info", {}).get("version", "0.0.1")
-    print(f"Using version: {version} from config file")
-
-    # Get current date and time
     datetime_info = get_formatted_datetime()
-    print(f"Current date: {datetime_info['date']}")
-    print(f"Current timestamp: {datetime_info['timestamp']}")
-
-    # Initialize header structure with all sections
+    
+    # Build header structure
     header = {
         "info": {
             "version": version,
@@ -191,37 +287,30 @@ def main():
             "git_branch": get_git_branch()
         },
         "stats": get_directory_stats(
-            current_dir,
+            root_path,  # Use root path as start path
             config_data["files"]["max_depth"],
             config_data["files"]["allowed_extensions"],
-            config_data["files"]["ignore_patterns"]
+            config_data["files"]["ignore_patterns"],
+            logs_path  # Pass logs path to stats function
         ),
-        "tree": get_file_tree(current_dir),
         "config": {
+            "paths": config_data["paths"],
             "files": config_data["files"],
-            "display": config_data["display"],
-            "paths": config_data["paths"]
+            "display": config_data["display"]
         },
         "media": config_data["media"],
         "dir_tree": config_data["dir_tree"],
         "html_content": config_data["html_content"],
-        "threejs_scene": config_data["threejs_scene"]
+        "threejs_scene": config_data["threejs_scene"],
+        "tree": get_file_tree(root_path)  # Use root path for tree
     }
 
-    # Create final JSON structure
+    # Create and write final structure
     final_data = {
         "header": header,
         "structure": {}
     }
-
-    # Write to data.json
-    try:
-        with open(data_file, 'w', encoding='utf-8') as f:
-            json.dump(final_data, f, indent='\t', ensure_ascii=False)
-        print(f"Successfully generated {data_file}")
-    except Exception as e:
-        print(f"Error writing to data.json: {e}")
+    write_file_structure(final_data, config_data)
 
 if __name__ == "__main__":
     main()
-
