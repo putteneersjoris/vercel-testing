@@ -1,0 +1,1052 @@
+{
+  "header": {
+    "info": {
+      "version": "alpha",
+      "build_id": 34,
+      "timestamp": "2024_11_19",
+      "git_branch": "main"
+    },
+    "stats": {
+      "total_files": 21,
+      "total_folders": 8,
+      "total_size": 13639839
+    },
+    "tree": [
+      "./",
+      "├── archigrad.io/",
+      "│   └── example/",
+      "│       ├── demoproject/",
+      "│       │   ├── 1.png",
+      "│       │   ├── 2.png",
+      "│       │   ├── 3.png",
+      "│       │   └── description.txt",
+      "│       └── videos/",
+      "│           ├── admin_remove_project.mp4",
+      "│           ├── admin_upload_project.mp4",
+      "│           └── website_navigation.mp4",
+      "└── scripts/",
+      "    ├── attempt.json",
+      "    ├── config.yml",
+      "    ├── data.json",
+      "    ├── filestructure.json",
+      "    ├── index.html",
+      "    ├── js/",
+      "    │   └── main.js",
+      "    ├── logs/",
+      "    │   ├── dir_scan_20241118_230358.log",
+      "    │   ├── dir_scan_20241118_234130.log",
+      "    │   ├── dir_scan_20241118_234322.log",
+      "    │   ├── dir_scan_20241118_234420.log",
+      "    │   ├── dir_scan_20241118_234545.log",
+      "    │   ├── dir_scan_20241118_235333.log",
+      "    │   ├── dir_scan_20241119_001115.log",
+      "    │   ├── dir_scan_20241119_001251.log",
+      "    │   ├── dir_scan_20241119_001828.log",
+      "    │   ├── dir_scan_20241119_002721.log",
+      "    │   ├── dir_scan_20241119_004319.log",
+      "    │   └── dir_scan_20241119_004939.log",
+      "    ├── py/",
+      "    │   ├── config_utils.py",
+      "    │   ├── generator2.py",
+      "    │   ├── header_utils.py",
+      "    │   ├── image_utils.py",
+      "    │   ├── logger.py",
+      "    │   ├── main_combined.py",
+      "    │   ├── main.py",
+      "    │   ├── __pycache__/",
+      "    │   │   ├── config_utils.cpython-310.pyc",
+      "    │   │   ├── header_utils.cpython-310.pyc",
+      "    │   │   ├── image_utils.cpython-310.pyc",
+      "    │   │   ├── logger.cpython-310.pyc",
+      "    │   │   └── structure_utils.cpython-310.pyc",
+      "    │   └── structure_utils.py",
+      "    └── styles/",
+      "        └── style.css"
+    ],
+    "config": {
+      "info": {
+        "version": "alpha"
+      },
+      "files": {
+        "filename": "data.json",
+        "max_depth": 5,
+        "allowed_extensions": [
+          "jpg",
+          "png",
+          "gif",
+          "txt",
+          "sh",
+          "py",
+          "obj",
+          "html",
+          "js",
+          "json",
+          "yml",
+          "mp4",
+          "css",
+          "log"
+        ],
+        "ignore_patterns": [
+          "_*",
+          ".*",
+          "log*"
+        ],
+        "text_files_to_images": true,
+        "folder_names_to_images": true
+      },
+      "paths": {
+        "root": "./",
+        "scripts": "./scripts",
+        "py": "./scripts/py",
+        "js": "./scripts/js",
+        "config": "./scripts/config.yml",
+        "content": "./archigrad.io",
+        "logs": "./scripts/logs"
+      },
+      "display": {
+        "sort": [
+          "date",
+          "size",
+          "user"
+        ],
+        "mobile": {
+          "switch_to_mobile_when": "50%",
+          "show_dir_tree": true,
+          "show_html_content": true,
+          "show_theejs_scene": true
+        }
+      },
+      "media": {
+        "image_quality": 85,
+        "html_content": {
+          "dimensions": {
+            "desktop": [
+              800,
+              600
+            ],
+            "mobile": [
+              800,
+              600
+            ]
+          },
+          "paths": {
+            "desktop_path": "processed",
+            "mobile_path": "processed"
+          }
+        },
+        "threejs_scene": {
+          "dimensions": {
+            "desktop": [
+              800,
+              600
+            ],
+            "mobile": [
+              800,
+              600
+            ]
+          },
+          "paths": {
+            "desktop_path": "processed",
+            "mobile_path": "processed"
+          }
+        }
+      },
+      "dir_tree": {},
+      "html_content": {},
+      "threejs_scene": {
+        "appearance": {
+          "transparency_color": "black"
+        },
+        "render": {
+          "show_foldernames_as_images": true,
+          "show_textfils_as_images": true,
+          "show_comment_tags": true,
+          "show_stack_tags": true
+        },
+        "performance": {
+          "max_instances": 1000,
+          "grid_size": 10,
+          "spacing": 0
+        }
+      },
+      "processed_paths": {
+        "html_desktop": "./.html_desktop_processed",
+        "html_mobile": "./.html_mobile_processed",
+        "threejs_desktop": "./.threejs_desktop_processed",
+        "threejs_mobile": "./.threejs_mobile_processed"
+      }
+    },
+    "media": {
+      "image_quality": 85,
+      "html_content": {
+        "dimensions": {
+          "desktop": [
+            800,
+            600
+          ],
+          "mobile": [
+            800,
+            600
+          ]
+        },
+        "paths": {
+          "desktop_path": "processed",
+          "mobile_path": "processed"
+        }
+      },
+      "threejs_scene": {
+        "dimensions": {
+          "desktop": [
+            800,
+            600
+          ],
+          "mobile": [
+            800,
+            600
+          ]
+        },
+        "paths": {
+          "desktop_path": "processed",
+          "mobile_path": "processed"
+        }
+      }
+    },
+    "dir_tree": {},
+    "html_content": {},
+    "threejs_scene": {
+      "appearance": {
+        "transparency_color": "black"
+      },
+      "render": {
+        "show_foldernames_as_images": true,
+        "show_textfils_as_images": true,
+        "show_comment_tags": true,
+        "show_stack_tags": true
+      },
+      "performance": {
+        "max_instances": 1000,
+        "grid_size": 10,
+        "spacing": 0
+      }
+    }
+  },
+  "structure": {
+    "root": {
+      "name": "root",
+      "type": "directory",
+      "htmlPath": "/./index.html",
+      "folder_metadata": {
+        "childCount": 2,
+        "size": 13639839,
+        "created": "2024-11-19T00:43:19Z",
+        "lastModified": "2024-11-19T00:43:19Z"
+      },
+      "content": {
+        "dir_tree": {},
+        "html_content": {
+          "custom_html_present": true,
+          "htmlPath": "/./index.html"
+        },
+        "threejs_scene": {
+          "images": [
+            "/.html_mobile_processed/archigrad.io/example/demoproject/2.png",
+            "/.html_mobile_processed/archigrad.io/example/demoproject/1.png",
+            "/.html_mobile_processed/archigrad.io/example/demoproject/3.png",
+            "/.threejs_mobile_processed/archigrad.io/example/demoproject/2.png",
+            "/.threejs_mobile_processed/archigrad.io/example/demoproject/1.png",
+            "/.threejs_mobile_processed/archigrad.io/example/demoproject/3.png",
+            "/.html_desktop_processed/archigrad.io/example/demoproject/2.png",
+            "/.html_desktop_processed/archigrad.io/example/demoproject/1.png",
+            "/.html_desktop_processed/archigrad.io/example/demoproject/3.png",
+            "/.threejs_desktop_processed/archigrad.io/example/demoproject/2.png",
+            "/.threejs_desktop_processed/archigrad.io/example/demoproject/1.png",
+            "/.threejs_desktop_processed/archigrad.io/example/demoproject/3.png",
+            "/archigrad.io/example/demoproject/2.png",
+            "/archigrad.io/example/demoproject/1.png",
+            "/archigrad.io/example/demoproject/3.png"
+          ],
+          "tags": {
+            "stack_tag": [],
+            "comment_tag": []
+          }
+        }
+      },
+      "children": {
+        "archigrad.io": {
+          "name": "archigrad.io",
+          "type": "directory",
+          "htmlPath": "/archigrad.io/index.html",
+          "folder_metadata": {
+            "childCount": 1,
+            "size": 13553468,
+            "created": "2024-11-18T21:26:31Z",
+            "lastModified": "2024-11-18T21:26:31Z"
+          },
+          "content": {
+            "dir_tree": {},
+            "html_content": {
+              "custom_html_present": true,
+              "htmlPath": "/archigrad.io/index.html"
+            },
+            "threejs_scene": {
+              "images": [
+                "/archigrad.io/example/demoproject/2.png",
+                "/archigrad.io/example/demoproject/1.png",
+                "/archigrad.io/example/demoproject/3.png"
+              ],
+              "tags": {
+                "stack_tag": [],
+                "comment_tag": []
+              }
+            }
+          },
+          "children": {
+            "example": {
+              "name": "example",
+              "type": "directory",
+              "htmlPath": "/archigrad.io/example/index.html",
+              "folder_metadata": {
+                "childCount": 2,
+                "size": 13553468,
+                "created": "2024-11-18T21:22:10Z",
+                "lastModified": "2024-03-18T19:50:40Z"
+              },
+              "content": {
+                "dir_tree": {},
+                "html_content": {
+                  "custom_html_present": true,
+                  "htmlPath": "/archigrad.io/example/index.html"
+                },
+                "threejs_scene": {
+                  "images": [
+                    "/archigrad.io/example/demoproject/2.png",
+                    "/archigrad.io/example/demoproject/1.png",
+                    "/archigrad.io/example/demoproject/3.png"
+                  ],
+                  "tags": {
+                    "stack_tag": [],
+                    "comment_tag": []
+                  }
+                }
+              },
+              "children": {
+                "demoproject": {
+                  "name": "demoproject",
+                  "type": "directory",
+                  "htmlPath": "/archigrad.io/example/demoproject/index.html",
+                  "folder_metadata": {
+                    "childCount": 4,
+                    "size": 2767442,
+                    "created": "2024-11-18T21:20:51Z",
+                    "lastModified": "2024-03-18T19:50:40Z"
+                  },
+                  "content": {
+                    "dir_tree": {},
+                    "html_content": {
+                      "custom_html_present": true,
+                      "htmlPath": "/archigrad.io/example/demoproject/index.html"
+                    },
+                    "threejs_scene": {
+                      "images": [
+                        "/archigrad.io/example/demoproject/2.png",
+                        "/archigrad.io/example/demoproject/1.png",
+                        "/archigrad.io/example/demoproject/3.png"
+                      ],
+                      "tags": {
+                        "stack_tag": [],
+                        "comment_tag": []
+                      }
+                    }
+                  },
+                  "children": {
+                    "1.png": {
+                      "name": "1.png",
+                      "type": "file",
+                      "fileType": "image",
+                      "htmlPath": "/archigrad.io/example/demoproject/1.png",
+                      "file_metadata": {
+                        "childId": 0,
+                        "size": 838079,
+                        "created": "2024-11-18T21:20:51Z",
+                        "lastModified": "2024-03-18T19:50:40Z"
+                      },
+                      "content": {
+                        "dir_tree": {},
+                        "html_content": {
+                          "custom_html_present": true,
+                          "htmlPath": "/archigrad.io/example/demoproject/1.png"
+                        },
+                        "threejs_scene": {
+                          "images": [],
+                          "tags": {
+                            "stack_tag": [],
+                            "comment_tag": []
+                          }
+                        }
+                      }
+                    },
+                    "2.png": {
+                      "name": "2.png",
+                      "type": "file",
+                      "fileType": "image",
+                      "htmlPath": "/archigrad.io/example/demoproject/2.png",
+                      "file_metadata": {
+                        "childId": 1,
+                        "size": 940332,
+                        "created": "2024-11-18T21:20:51Z",
+                        "lastModified": "2024-03-18T19:50:40Z"
+                      },
+                      "content": {
+                        "dir_tree": {},
+                        "html_content": {
+                          "custom_html_present": true,
+                          "htmlPath": "/archigrad.io/example/demoproject/2.png"
+                        },
+                        "threejs_scene": {
+                          "images": [],
+                          "tags": {
+                            "stack_tag": [],
+                            "comment_tag": []
+                          }
+                        }
+                      }
+                    },
+                    "3.png": {
+                      "name": "3.png",
+                      "type": "file",
+                      "fileType": "image",
+                      "htmlPath": "/archigrad.io/example/demoproject/3.png",
+                      "file_metadata": {
+                        "childId": 2,
+                        "size": 988067,
+                        "created": "2024-11-18T21:20:51Z",
+                        "lastModified": "2024-03-18T19:50:40Z"
+                      },
+                      "content": {
+                        "dir_tree": {},
+                        "html_content": {
+                          "custom_html_present": true,
+                          "htmlPath": "/archigrad.io/example/demoproject/3.png"
+                        },
+                        "threejs_scene": {
+                          "images": [],
+                          "tags": {
+                            "stack_tag": [],
+                            "comment_tag": []
+                          }
+                        }
+                      }
+                    },
+                    "description.txt": {
+                      "name": "description.txt",
+                      "type": "file",
+                      "fileType": "text",
+                      "htmlPath": "/archigrad.io/example/demoproject/description.txt",
+                      "file_metadata": {
+                        "childId": 3,
+                        "size": 964,
+                        "created": "2024-11-18T21:20:51Z",
+                        "lastModified": "2024-03-18T19:50:40Z"
+                      },
+                      "content": {
+                        "dir_tree": {},
+                        "html_content": {
+                          "custom_html_present": true,
+                          "htmlPath": "/archigrad.io/example/demoproject/description.txt"
+                        },
+                        "threejs_scene": {
+                          "images": [],
+                          "tags": {
+                            "stack_tag": [],
+                            "comment_tag": []
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "videos": {
+                  "name": "videos",
+                  "type": "directory",
+                  "htmlPath": "/archigrad.io/example/videos/index.html",
+                  "folder_metadata": {
+                    "childCount": 3,
+                    "size": 10786026,
+                    "created": "2024-11-18T23:43:02Z",
+                    "lastModified": "2024-11-18T23:43:02Z"
+                  },
+                  "content": {
+                    "dir_tree": {},
+                    "html_content": {
+                      "custom_html_present": true,
+                      "htmlPath": "/archigrad.io/example/videos/index.html"
+                    },
+                    "threejs_scene": {
+                      "images": [],
+                      "tags": {
+                        "stack_tag": [],
+                        "comment_tag": []
+                      }
+                    }
+                  },
+                  "children": {
+                    "admin_remove_project.mp4": {
+                      "name": "admin_remove_project.mp4",
+                      "type": "file",
+                      "fileType": "video",
+                      "htmlPath": "/archigrad.io/example/videos/admin_remove_project.mp4",
+                      "file_metadata": {
+                        "childId": 0,
+                        "size": 2036482,
+                        "created": "2024-11-18T21:20:51Z",
+                        "lastModified": "2024-03-18T19:50:40Z"
+                      },
+                      "content": {
+                        "dir_tree": {},
+                        "html_content": {
+                          "custom_html_present": true,
+                          "htmlPath": "/archigrad.io/example/videos/admin_remove_project.mp4"
+                        },
+                        "threejs_scene": {
+                          "images": [],
+                          "tags": {
+                            "stack_tag": [],
+                            "comment_tag": []
+                          }
+                        }
+                      }
+                    },
+                    "admin_upload_project.mp4": {
+                      "name": "admin_upload_project.mp4",
+                      "type": "file",
+                      "fileType": "video",
+                      "htmlPath": "/archigrad.io/example/videos/admin_upload_project.mp4",
+                      "file_metadata": {
+                        "childId": 1,
+                        "size": 2254824,
+                        "created": "2024-11-18T21:20:51Z",
+                        "lastModified": "2024-03-18T19:50:40Z"
+                      },
+                      "content": {
+                        "dir_tree": {},
+                        "html_content": {
+                          "custom_html_present": true,
+                          "htmlPath": "/archigrad.io/example/videos/admin_upload_project.mp4"
+                        },
+                        "threejs_scene": {
+                          "images": [],
+                          "tags": {
+                            "stack_tag": [],
+                            "comment_tag": []
+                          }
+                        }
+                      }
+                    },
+                    "website_navigation.mp4": {
+                      "name": "website_navigation.mp4",
+                      "type": "file",
+                      "fileType": "video",
+                      "htmlPath": "/archigrad.io/example/videos/website_navigation.mp4",
+                      "file_metadata": {
+                        "childId": 2,
+                        "size": 6494720,
+                        "created": "2024-11-18T21:20:51Z",
+                        "lastModified": "2024-03-18T19:50:41Z"
+                      },
+                      "content": {
+                        "dir_tree": {},
+                        "html_content": {
+                          "custom_html_present": true,
+                          "htmlPath": "/archigrad.io/example/videos/website_navigation.mp4"
+                        },
+                        "threejs_scene": {
+                          "images": [],
+                          "tags": {
+                            "stack_tag": [],
+                            "comment_tag": []
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "scripts": {
+          "name": "scripts",
+          "type": "directory",
+          "htmlPath": "/scripts/index.html",
+          "folder_metadata": {
+            "childCount": 8,
+            "size": 86371,
+            "created": "2024-11-19T00:48:26Z",
+            "lastModified": "2024-11-19T00:48:26Z"
+          },
+          "content": {
+            "dir_tree": {},
+            "html_content": {
+              "custom_html_present": true,
+              "htmlPath": "/scripts/index.html"
+            },
+            "threejs_scene": {
+              "images": [],
+              "tags": {
+                "stack_tag": [],
+                "comment_tag": []
+              }
+            }
+          },
+          "children": {
+            "js": {
+              "name": "js",
+              "type": "directory",
+              "htmlPath": "/scripts/js/index.html",
+              "folder_metadata": {
+                "childCount": 1,
+                "size": 0,
+                "created": "2024-11-18T21:26:59Z",
+                "lastModified": "2024-11-18T21:26:59Z"
+              },
+              "content": {
+                "dir_tree": {},
+                "html_content": {
+                  "custom_html_present": true,
+                  "htmlPath": "/scripts/js/index.html"
+                },
+                "threejs_scene": {
+                  "images": [],
+                  "tags": {
+                    "stack_tag": [],
+                    "comment_tag": []
+                  }
+                }
+              },
+              "children": {
+                "main.js": {
+                  "name": "main.js",
+                  "type": "file",
+                  "fileType": "javascript",
+                  "htmlPath": "/scripts/js/main.js",
+                  "file_metadata": {
+                    "childId": 0,
+                    "size": 0,
+                    "created": "2024-11-18T21:26:59Z",
+                    "lastModified": "2024-11-18T21:26:59Z"
+                  },
+                  "content": {
+                    "dir_tree": {},
+                    "html_content": {
+                      "custom_html_present": true,
+                      "htmlPath": "/scripts/js/main.js"
+                    },
+                    "threejs_scene": {
+                      "images": [],
+                      "tags": {
+                        "stack_tag": [],
+                        "comment_tag": []
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "py": {
+              "name": "py",
+              "type": "directory",
+              "htmlPath": "/scripts/py/index.html",
+              "folder_metadata": {
+                "childCount": 7,
+                "size": 36319,
+                "created": "2024-11-19T00:49:36Z",
+                "lastModified": "2024-11-19T00:49:36Z"
+              },
+              "content": {
+                "dir_tree": {},
+                "html_content": {
+                  "custom_html_present": true,
+                  "htmlPath": "/scripts/py/index.html"
+                },
+                "threejs_scene": {
+                  "images": [],
+                  "tags": {
+                    "stack_tag": [],
+                    "comment_tag": []
+                  }
+                }
+              },
+              "children": {
+                "config_utils.py": {
+                  "name": "config_utils.py",
+                  "type": "file",
+                  "fileType": "python",
+                  "htmlPath": "/scripts/py/config_utils.py",
+                  "file_metadata": {
+                    "childId": 0,
+                    "size": 645,
+                    "created": "2024-11-18T23:02:15Z",
+                    "lastModified": "2024-11-18T23:02:15Z"
+                  },
+                  "content": {
+                    "dir_tree": {},
+                    "html_content": {
+                      "custom_html_present": true,
+                      "htmlPath": "/scripts/py/config_utils.py"
+                    },
+                    "threejs_scene": {
+                      "images": [],
+                      "tags": {
+                        "stack_tag": [],
+                        "comment_tag": []
+                      }
+                    }
+                  }
+                },
+                "generator2.py": {
+                  "name": "generator2.py",
+                  "type": "file",
+                  "fileType": "python",
+                  "htmlPath": "/scripts/py/generator2.py",
+                  "file_metadata": {
+                    "childId": 1,
+                    "size": 11363,
+                    "created": "2024-11-18T22:14:47Z",
+                    "lastModified": "2024-11-18T22:14:47Z"
+                  },
+                  "content": {
+                    "dir_tree": {},
+                    "html_content": {
+                      "custom_html_present": true,
+                      "htmlPath": "/scripts/py/generator2.py"
+                    },
+                    "threejs_scene": {
+                      "images": [],
+                      "tags": {
+                        "stack_tag": [],
+                        "comment_tag": []
+                      }
+                    }
+                  }
+                },
+                "header_utils.py": {
+                  "name": "header_utils.py",
+                  "type": "file",
+                  "fileType": "python",
+                  "htmlPath": "/scripts/py/header_utils.py",
+                  "file_metadata": {
+                    "childId": 2,
+                    "size": 5671,
+                    "created": "2024-11-19T00:17:14Z",
+                    "lastModified": "2024-11-19T00:17:14Z"
+                  },
+                  "content": {
+                    "dir_tree": {},
+                    "html_content": {
+                      "custom_html_present": true,
+                      "htmlPath": "/scripts/py/header_utils.py"
+                    },
+                    "threejs_scene": {
+                      "images": [],
+                      "tags": {
+                        "stack_tag": [],
+                        "comment_tag": []
+                      }
+                    }
+                  }
+                },
+                "image_utils.py": {
+                  "name": "image_utils.py",
+                  "type": "file",
+                  "fileType": "python",
+                  "htmlPath": "/scripts/py/image_utils.py",
+                  "file_metadata": {
+                    "childId": 3,
+                    "size": 3851,
+                    "created": "2024-11-19T00:49:36Z",
+                    "lastModified": "2024-11-19T00:49:36Z"
+                  },
+                  "content": {
+                    "dir_tree": {},
+                    "html_content": {
+                      "custom_html_present": true,
+                      "htmlPath": "/scripts/py/image_utils.py"
+                    },
+                    "threejs_scene": {
+                      "images": [],
+                      "tags": {
+                        "stack_tag": [],
+                        "comment_tag": []
+                      }
+                    }
+                  }
+                },
+                "main.py": {
+                  "name": "main.py",
+                  "type": "file",
+                  "fileType": "python",
+                  "htmlPath": "/scripts/py/main.py",
+                  "file_metadata": {
+                    "childId": 4,
+                    "size": 963,
+                    "created": "2024-11-19T00:45:20Z",
+                    "lastModified": "2024-11-19T00:45:20Z"
+                  },
+                  "content": {
+                    "dir_tree": {},
+                    "html_content": {
+                      "custom_html_present": true,
+                      "htmlPath": "/scripts/py/main.py"
+                    },
+                    "threejs_scene": {
+                      "images": [],
+                      "tags": {
+                        "stack_tag": [],
+                        "comment_tag": []
+                      }
+                    }
+                  }
+                },
+                "main_combined.py": {
+                  "name": "main_combined.py",
+                  "type": "file",
+                  "fileType": "python",
+                  "htmlPath": "/scripts/py/main_combined.py",
+                  "file_metadata": {
+                    "childId": 5,
+                    "size": 6502,
+                    "created": "2024-11-18T23:00:03Z",
+                    "lastModified": "2024-11-18T23:00:03Z"
+                  },
+                  "content": {
+                    "dir_tree": {},
+                    "html_content": {
+                      "custom_html_present": true,
+                      "htmlPath": "/scripts/py/main_combined.py"
+                    },
+                    "threejs_scene": {
+                      "images": [],
+                      "tags": {
+                        "stack_tag": [],
+                        "comment_tag": []
+                      }
+                    }
+                  }
+                },
+                "structure_utils.py": {
+                  "name": "structure_utils.py",
+                  "type": "file",
+                  "fileType": "python",
+                  "htmlPath": "/scripts/py/structure_utils.py",
+                  "file_metadata": {
+                    "childId": 6,
+                    "size": 7324,
+                    "created": "2024-11-19T00:43:28Z",
+                    "lastModified": "2024-11-19T00:43:28Z"
+                  },
+                  "content": {
+                    "dir_tree": {},
+                    "html_content": {
+                      "custom_html_present": true,
+                      "htmlPath": "/scripts/py/structure_utils.py"
+                    },
+                    "threejs_scene": {
+                      "images": [],
+                      "tags": {
+                        "stack_tag": [],
+                        "comment_tag": []
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "styles": {
+              "name": "styles",
+              "type": "directory",
+              "htmlPath": "/scripts/styles/index.html",
+              "folder_metadata": {
+                "childCount": 1,
+                "size": 0,
+                "created": "2024-11-18T21:27:16Z",
+                "lastModified": "2024-11-18T21:27:16Z"
+              },
+              "content": {
+                "dir_tree": {},
+                "html_content": {
+                  "custom_html_present": true,
+                  "htmlPath": "/scripts/styles/index.html"
+                },
+                "threejs_scene": {
+                  "images": [],
+                  "tags": {
+                    "stack_tag": [],
+                    "comment_tag": []
+                  }
+                }
+              },
+              "children": {
+                "style.css": {
+                  "name": "style.css",
+                  "type": "file",
+                  "fileType": "css",
+                  "htmlPath": "/scripts/styles/style.css",
+                  "file_metadata": {
+                    "childId": 0,
+                    "size": 0,
+                    "created": "2024-11-18T21:27:16Z",
+                    "lastModified": "2024-11-18T21:27:16Z"
+                  },
+                  "content": {
+                    "dir_tree": {},
+                    "html_content": {
+                      "custom_html_present": true,
+                      "htmlPath": "/scripts/styles/style.css"
+                    },
+                    "threejs_scene": {
+                      "images": [],
+                      "tags": {
+                        "stack_tag": [],
+                        "comment_tag": []
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "attempt.json": {
+              "name": "attempt.json",
+              "type": "file",
+              "fileType": "json",
+              "htmlPath": "/scripts/attempt.json",
+              "file_metadata": {
+                "childId": 3,
+                "size": 4992,
+                "created": "2024-11-18T21:25:12Z",
+                "lastModified": "2024-11-18T19:16:03Z"
+              },
+              "content": {
+                "dir_tree": {},
+                "html_content": {
+                  "custom_html_present": true,
+                  "htmlPath": "/scripts/attempt.json"
+                },
+                "threejs_scene": {
+                  "images": [],
+                  "tags": {
+                    "stack_tag": [],
+                    "comment_tag": []
+                  }
+                }
+              }
+            },
+            "config.yml": {
+              "name": "config.yml",
+              "type": "file",
+              "fileType": "yaml",
+              "htmlPath": "/scripts/config.yml",
+              "file_metadata": {
+                "childId": 4,
+                "size": 1339,
+                "created": "2024-11-19T00:48:26Z",
+                "lastModified": "2024-11-19T00:48:26Z"
+              },
+              "content": {
+                "dir_tree": {},
+                "html_content": {
+                  "custom_html_present": true,
+                  "htmlPath": "/scripts/config.yml"
+                },
+                "threejs_scene": {
+                  "images": [],
+                  "tags": {
+                    "stack_tag": [],
+                    "comment_tag": []
+                  }
+                }
+              }
+            },
+            "data.json": {
+              "name": "data.json",
+              "type": "file",
+              "fileType": "json",
+              "htmlPath": "/scripts/data.json",
+              "file_metadata": {
+                "childId": 5,
+                "size": 22890,
+                "created": "2024-11-19T00:43:19Z",
+                "lastModified": "2024-11-19T00:43:19Z"
+              },
+              "content": {
+                "dir_tree": {},
+                "html_content": {
+                  "custom_html_present": true,
+                  "htmlPath": "/scripts/data.json"
+                },
+                "threejs_scene": {
+                  "images": [],
+                  "tags": {
+                    "stack_tag": [],
+                    "comment_tag": []
+                  }
+                }
+              }
+            },
+            "filestructure.json": {
+              "name": "filestructure.json",
+              "type": "file",
+              "fileType": "json",
+              "htmlPath": "/scripts/filestructure.json",
+              "file_metadata": {
+                "childId": 6,
+                "size": 12229,
+                "created": "2024-11-18T22:23:54Z",
+                "lastModified": "2024-11-18T22:23:54Z"
+              },
+              "content": {
+                "dir_tree": {},
+                "html_content": {
+                  "custom_html_present": true,
+                  "htmlPath": "/scripts/filestructure.json"
+                },
+                "threejs_scene": {
+                  "images": [],
+                  "tags": {
+                    "stack_tag": [],
+                    "comment_tag": []
+                  }
+                }
+              }
+            },
+            "index.html": {
+              "name": "index.html",
+              "type": "file",
+              "fileType": "html",
+              "htmlPath": "/scripts/index.html",
+              "file_metadata": {
+                "childId": 7,
+                "size": 8602,
+                "created": "2024-11-18T21:23:02Z",
+                "lastModified": "2024-11-18T14:12:53Z"
+              },
+              "content": {
+                "dir_tree": {},
+                "html_content": {
+                  "custom_html_present": true,
+                  "htmlPath": "/scripts/index.html"
+                },
+                "threejs_scene": {
+                  "images": [],
+                  "tags": {
+                    "stack_tag": [],
+                    "comment_tag": []
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

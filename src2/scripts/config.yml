@@ -1,9 +1,8 @@
-# File Configuration > initial parms
 info:
   version: "alpha"
 
 files:
-  filename: "filestructure.json"
+  filename: "data.json"
   max_depth: 5
   allowed_extensions:
     - jpg
@@ -16,14 +15,27 @@ files:
     - html 
     - js 
     - json 
-    - yml 
+    - yml
+    - mp4
+    - css
+    - log
   ignore_patterns:
     - "_*"
     - ".*"
+    - "log*"
   text_files_to_images: true
   folder_names_to_images: true
 
-# Display Settings > initial parms
+
+paths:
+  root: "./"
+  scripts: "./scripts"
+  py: "./scripts/py"
+  js: "./scripts/js"
+  config: "./scripts/config.yml"
+  content: "./archigrad.io"
+  logs: "./scripts/logs"
+
 display:
   sort:
     - date
@@ -35,13 +47,6 @@ display:
     show_html_content: true
     show_theejs_scene: true
 
-# Path Configuration  > initial parms
-paths:
-  config: "config.yml"
-  root: "./"
-  logs: "logs"
-
-# Media Settings  > initial parms
 media:
   image_quality: 85
   html_content:
@@ -59,13 +64,8 @@ media:
       desktop_path: "processed"
       mobile_path: "processed"
 
-# Directory Tree Configuration  > initial parms
 dir_tree: {}
-
-# HTML Content Configuration > initial parms
 html_content: {}
-
-# Three.js Scene Configuration > initial parms
 threejs_scene:
   appearance:
     transparency_color: "black"
@@ -78,4 +78,3 @@ threejs_scene:
     max_instances: 1000
     grid_size: 10
     spacing: 0
-

@@ -1,0 +1,101 @@
+
+=== Directory Scan Started ===
+Root path: ./
+Max depth: 5
+Allowed extensions: ['jpg', 'png', 'gif', 'txt', 'sh', 'py', 'obj', 'html', 'js', 'json', 'yml', 'mp4', 'css', 'log']
+Ignore patterns: ['_*', '.*']
+
+Processing directory: ./
+Current depth: 0
+
+Processing directory: ./scripts
+Current depth: 0
+Added file: data.json (24988 bytes)
+Added file: filestructure.json (12229 bytes)
+Added file: attempt.json (4992 bytes)
+Ignored file: .config.yml.swp
+Added file: index.html (8602 bytes)
+Ignored file: .data.json.swp
+Added file: config.yml (1326 bytes)
+
+Processing directory: ./scripts/js
+Current depth: 1
+Added file: main.js (0 bytes)
+
+Processing directory: ./scripts/py
+Current depth: 1
+Filtered directories: {'__pycache__'}
+Added file: logger.py (362 bytes)
+Added file: structure_utils.py (4250 bytes)
+Added file: header_utils.py (4950 bytes)
+Added file: generator2.py (11363 bytes)
+Added file: config_utils.py (645 bytes)
+Added file: main_combined.py (6502 bytes)
+Ignored file: .structure_utils.py.swp
+Added file: main.py (700 bytes)
+
+Processing directory: ./scripts/styles
+Current depth: 1
+Added file: style.css (0 bytes)
+
+Processing directory: ./scripts/logs
+Current depth: 1
+Added file: dir_scan_20241118_234130.log (3612 bytes)
+Added file: dir_scan_20241118_234322.log (1233 bytes)
+Added file: dir_scan_20241118_230358.log (2516 bytes)
+
+Processing directory: ./archigrad.io
+Current depth: 0
+
+Processing directory: ./archigrad.io/example
+Current depth: 1
+
+Processing directory: ./archigrad.io/example/demoproject
+Current depth: 2
+Added file: 2.png (940332 bytes)
+Added file: 1.png (838079 bytes)
+Added file: description.txt (964 bytes)
+Added file: 3.png (988067 bytes)
+
+Processing directory: ./archigrad.io/example/videos
+Current depth: 2
+Added file: admin_remove_project.mp4 (2036482 bytes)
+Added file: website_navigation.mp4 (6494720 bytes)
+Added file: admin_upload_project.mp4 (2254824 bytes)
+
+=== Creating File Structure ===
+Starting from root: ./
+
+Processing directory: ./
+
+Processing directory: ./archigrad.io
+
+Processing directory: ./archigrad.io/example
+
+Processing directory: ./archigrad.io/example/demoproject
+Processed 4 items in ./archigrad.io/example/demoproject
+
+Processing directory: ./archigrad.io/example/videos
+Processed 3 items in ./archigrad.io/example/videos
+Processed 2 items in ./archigrad.io/example
+Processed 1 items in ./archigrad.io
+
+Processing directory: ./scripts
+Ignoring item: .config.yml.swp
+Ignoring item: .data.json.swp
+
+Processing directory: ./scripts/js
+Processed 1 items in ./scripts/js
+
+Processing directory: ./scripts/logs
+Processed 3 items in ./scripts/logs
+
+Processing directory: ./scripts/py
+Ignoring item: .structure_utils.py.swp
+Ignoring item: __pycache__
+Processed 7 items in ./scripts/py
+
+Processing directory: ./scripts/styles
+Processed 1 items in ./scripts/styles
+Processed 9 items in ./scripts
+Processed 2 items in ./

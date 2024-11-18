@@ -1,0 +1,220 @@
+.
+├── README.md
+├── src
+│   ├── api
+│   │   └── add-comment.js
+│   ├── config.yml
+│   ├── data
+│   │   └── comments.json
+│   ├── foobar.json
+│   ├── index.html
+│   ├── package.json
+│   ├── script.js
+│   ├── style.css
+│   ├── token.txt
+│   ├── tree_html
+│   │   ├── gentree.py
+│   │   ├── index.html
+│   │   └── output.txt
+│   └── tree_html_2
+│       ├── attempt.json
+│       ├── config_original.yml
+│       ├── config.yml
+│       ├── filestructure.json
+│       ├── generator2.py
+│       ├── index.html
+│       ├── logs
+│       │   ├── generator_20241118_185856.log
+│       │   └── stats_log.txt
+│       └── testproject
+│           ├── dataREADME.py
+│           ├── example
+│           │   ├── demoproject
+│           │   │   ├── 1.png
+│           │   │   ├── 2.png
+│           │   │   ├── 3.png
+│           │   │   └── description.txt
+│           │   └── videos
+│           │       ├── admin_approve_project.gif
+│           │       ├── admin_approve_project.mp4
+│           │       ├── admin_remove_project.gif
+│           │       ├── admin_remove_project.mp4
+│           │       ├── admin_update_project.gif
+│           │       ├── admin_update_project.mp4
+│           │       ├── admin_upload_project.gif
+│           │       ├── admin_upload_project.mp4
+│           │       ├── user_fork_repository.gif
+│           │       ├── user_fork_repository.mp4
+│           │       ├── user_remove_project.gif
+│           │       ├── user_remove_project.mp4
+│           │       ├── user_update_project.gif
+│           │       ├── user_update_project.mp4
+│           │       ├── user_upload_project.gif
+│           │       ├── user_upload_project.mp4
+│           │       ├── website_navigation.gif
+│           │       └── website_navigation.mp4
+│           ├── generateREADME.py
+│           ├── __pycache__
+│           │   └── dataREADME.cpython-310.pyc
+│           ├── README.md
+│           └── src
+│               ├── about me.html
+│               ├── birds nest.html
+│               ├── Black ash desert.html
+│               ├── containers.html
+│               ├── content
+│               │   ├── about me
+│               │   │   ├── description.txt
+│               │   │   ├── DSC_0018___processed.png
+│               │   │   ├── DSC_0021___processed.png
+│               │   │   ├── DSC_0047___processed.png
+│               │   │   └── DSC_0058___processed.png
+│               │   ├── birds nest
+│               │   │   ├── description.txt
+│               │   │   ├── SHIPYARD_61___processed.png
+│               │   │   ├── SHIPYARD_62___processed.png
+│               │   │   └── SHIPYARD_63___processed.png
+│               │   ├── Black ash desert
+│               │   │   ├── BLACK_ASH_DESERT_246___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_251___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_255___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_257___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_259___processed.png
+│               │   │   └── description.txt
+│               │   ├── containers
+│               │   │   ├── description.txt
+│               │   │   ├── Shipping_Containers__85____processed.png
+│               │   │   ├── Shipping_Containers__86____processed.png
+│               │   │   └── Shipping_Containers__87____processed.png
+│               │   ├── fountain
+│               │   │   ├── description.txt
+│               │   │   ├── HOT_SPRINGS_092___processed.png
+│               │   │   ├── HOT_SPRINGS_094___processed.png
+│               │   │   └── HOT_SPRINGS_095___processed.png
+│               │   ├── greenland mountainscape
+│               │   │   ├── BLACK_ASH_DESERT_001___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_002___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_003___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_004___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_005___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_006___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_007___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_008___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_009___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_010___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_011___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_012___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_013___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_014___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_015___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_016___processed.png
+│               │   │   └── description.txt
+│               │   ├── hot springs
+│               │   │   ├── description.txt
+│               │   │   └── HOT_SPRINGS_052___processed.png
+│               │   ├── Iceland red rock
+│               │   │   ├── BLACK_ASH_DESERT_162___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_181___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_182___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_183___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_185___processed.png
+│               │   │   └── description.txt
+│               │   ├── indiana desert
+│               │   │   ├── description.txt
+│               │   │   ├── HOT_SPRINGS_011___processed.png
+│               │   │   ├── HOT_SPRINGS_015___processed.png
+│               │   │   ├── HOT_SPRINGS_027___processed.png
+│               │   │   ├── HOT_SPRINGS_038___processed.png
+│               │   │   ├── HOT_SPRINGS_039___processed.png
+│               │   │   └── HOT_SPRINGS_045___processed.png
+│               │   ├── photopack
+│               │   │   ├── BLACK_ASH_DESERT_072___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_118___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_190___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_215___processed.png
+│               │   │   ├── BLACK_ASH_DESERT_216___processed.png
+│               │   │   └── description.txt
+│               │   ├── seabad
+│               │   │   ├── description.txt
+│               │   │   ├── SHIPYARD_10___processed.png
+│               │   │   ├── SHIPYARD_11___processed.png
+│               │   │   └── SHIPYARD_12___processed.png
+│               │   └── shipwreck
+│               │       ├── asd___processed.png
+│               │       └── description.txt
+│               ├── data.js
+│               ├── demoproject.html
+│               ├── extra
+│               │   └── font
+│               │       ├── Roboto-BlackItalic.ttf
+│               │       ├── Roboto-Black.ttf
+│               │       ├── Roboto-BoldItalic.ttf
+│               │       ├── Roboto-Bold.ttf
+│               │       ├── Roboto-Italic.ttf
+│               │       ├── Roboto-LightItalic.ttf
+│               │       ├── Roboto-Light.ttf
+│               │       ├── Roboto-MediumItalic.ttf
+│               │       ├── Roboto-Medium.ttf
+│               │       ├── Roboto-Regular.ttf
+│               │       ├── Roboto-ThinItalic.ttf
+│               │       └── Roboto-Thin.ttf
+│               ├── fountain.html
+│               ├── generateData.py
+│               ├── greenland mountainscape.html
+│               ├── hot springs.html
+│               ├── Iceland red rock.html
+│               ├── index.html
+│               ├── indiana desert.html
+│               ├── photopack.html
+│               ├── __pycache__
+│               │   └── staticHtmlString.cpython-310.pyc
+│               ├── script.js
+│               ├── seabad.html
+│               ├── shipwreck.html
+│               ├── staticHtmlString.py
+│               └── style.css
+├── src2
+│   ├── archigrad.io
+│   │   └── example
+│   │       ├── demoproject
+│   │       │   ├── 1.png
+│   │       │   ├── 2.png
+│   │       │   ├── 3.png
+│   │       │   └── description.txt
+│   │       └── videos
+│   │           ├── admin_approve_project.gif
+│   │           ├── admin_approve_project.mp4
+│   │           ├── admin_remove_project.gif
+│   │           ├── admin_remove_project.mp4
+│   │           ├── admin_update_project.gif
+│   │           ├── admin_update_project.mp4
+│   │           ├── admin_upload_project.gif
+│   │           ├── admin_upload_project.mp4
+│   │           ├── user_fork_repository.gif
+│   │           ├── user_fork_repository.mp4
+│   │           ├── user_remove_project.gif
+│   │           ├── user_remove_project.mp4
+│   │           ├── user_update_project.gif
+│   │           ├── user_update_project.mp4
+│   │           ├── user_upload_project.gif
+│   │           ├── user_upload_project.mp4
+│   │           ├── website_navigation.gif
+│   │           └── website_navigation.mp4
+│   └── scripts
+│       ├── attempt.json
+│       ├── config.yml
+│       ├── data.json
+│       ├── filestructure.json
+│       ├── index.html
+│       ├── js
+│       │   └── main.js
+│       ├── logs
+│       │   ├── generator_20241118_185856.log
+│       │   └── stats_log.txt
+│       ├── py
+│       │   └── generator2.py
+│       └── styles
+│           └── style.css
+└── test.txt
+
+38 directories, 179 files

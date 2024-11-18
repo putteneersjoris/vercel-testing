@@ -1,14 +1,3 @@
 # vercel-testing
 
-update
-
-
-update 2
-update 3
-update 4
-
-
-
-
-update 5
-
+was in the process of updating the image processing image_utils.py. far from perfect, its a start.
