@@ -1,0 +1,227 @@
+{
+	"header": {
+		"info": {
+			"version": "0.0.1",
+			"build_id": 23,
+			"timestamp": "2024_12_34",
+			"git_branch": "dev"
+		},
+		"stats": {
+			"total_projects": 12,
+			"total_files": 333,
+			"total_folders": 79,
+			"total_size": 3333,
+			"last_modified": "19_29_34"
+		},
+		"tree": [
+			"root/",
+			"├── README.md                 (1.0 KB)",
+			"├── src/",
+			"│   └── api/",
+			"│       └── add-comment.js    (2.0 KB)",
+			"└── upload.sh               (512 B)"
+		],
+		"config": {
+			"files": {
+				"max_depth": 5,
+				
+				"allowed_extensions": ["jpg", "png", "gif", "txt", "sh", "py", ".obj"],
+				"ignore_patterns": ["*hidden.*", "_", ".", ".git", ".gitignore"],
+				"text_files_to_images": true,
+				"folder_names_to_images": true
+			},
+			"display": {
+				"sort": ["date", "size", "user"],
+				"mobile": {
+					"switch_to_mobile_when": "50%",
+					"show_dir_tree": true,
+					"show_html_content": true,
+					"show_theejs_scene": true
+				}
+			},
+			"paths": {
+				"config": "./config.yml",
+				"src": "src",
+				"logs": "logs"
+			}
+		},
+		"media": {
+			"image_quality": 85,
+			"html_content": {
+				"dimensions": {
+					"desktop": [800, 600],
+					"mobile": [800, 600]
+				},
+				"paths": {
+					"desktop_path": "processed",
+					"mobile_path": "processed"
+				}
+			},
+			"threejs_scene": {
+				"dimensions": {
+					"desktop": [800, 600],
+					"mobile": [800, 600]
+				},
+				"paths": {
+					"desktop_path": "processed",
+					"mobile_path": "processed"
+				}
+			}
+		},
+		"dir_tree": {},
+		"html_content": {},
+		"threejs_scene": {
+			"appearance": {
+				"transparency_color": "black"
+			},
+			"render": {
+				"show_foldernames_as_images": true,
+				"show_textfils_as_images": true,
+				"show_comment_tags": true,
+				"show_stack_tags": true
+			},
+			"performance": {
+				"max_instances": 1000,
+				"grid_size": 10,
+				"spacing": 0
+			}
+		}
+	},
+	"structure": {
+		"root": {
+			"name": "root",
+			"type": "directory",
+			"htmlPath": "/root/README.html",
+			"folder_metadata": {
+				"childCount": 4,
+				"size": 2000,
+				"created": "2024-11-17T12:00:00Z",
+				"lastModified": "2024-11-17T12:00:00Z"
+			},
+			"content": {
+				"dir_tree": {},
+				"html_content": {
+					"custom_html_present": true,
+					"htmlPath": "/root/index.html"
+				},
+				"threejs_scene": {
+					"images": [],
+					"tags": {
+						"stack_tag": [],
+						"comment_tag": []
+					}
+				}
+			},
+			"children": {
+				"README.md": {
+					"name": "README.md",
+					"type": "file",
+					"fileType": "markdown",
+					"htmlPath": "/root/README.html",
+					"file_metadata": {
+						"childId": 0,
+						"size": 1024,
+						"created": "2024-11-17T12:00:00Z",
+						"lastModified": "2024-11-17T12:00:00Z"
+					},
+					"content": {
+						"dir_tree": {},
+						"html_content": {
+							"custom_html_present": false,
+							"htmlPath": "/root/README.html"
+						},
+						"threejs_scene": {
+							"images": [],
+							"tags": {
+								"stack_tag": [],
+								"comment_tag": []
+							}
+						}
+					}
+				},
+				"src": {
+					"name": "src",
+					"type": "directory",
+					"htmlPath": "/root/src/index.html",
+					"metadata": {
+						"childId": 1,
+						"childCount": 2,
+						"size": 4096,
+						"created": "2024-11-17T12:00:00Z",
+						"lastModified": "2024-11-17T12:00:00Z"
+					},
+					"content": {
+						"dir_tree": {},
+						"html_content": {
+							"custom_html_present": false,
+							"htmlPath": "/root/src/index.html"
+						},
+						"threejs_scene": {
+							"images": [],
+							"tags": {
+								"stack_tag": [],
+								"comment_tag": []
+							}
+						}
+					},
+					"children": {
+						"api": {
+							"name": "api",
+							"type": "directory",
+							"htmlPath": "/root/src/api/index.html",
+							"metadata": {
+								"childId": 0,
+								"childCount": 1,
+								"size": 2048,
+								"created": "2024-11-17T12:00:00Z",
+								"lastModified": "2024-11-17T12:00:00Z"
+							},
+							"content": {
+								"dir_tree": {},
+								"html_content": {
+									"custom_html_present": false,
+									"htmlPath": "/root/src/api/index.html"
+								},
+								"threejs_scene": {
+									"images": [],
+									"tags": {
+										"stack_tag": [],
+										"comment_tag": []
+									}
+								}
+							},
+							"children": {
+								"add-comment.js": {
+									"name": "add-comment.js",
+									"type": "file",
+									"fileType": "javascript",
+									"htmlPath": "/root/src/api/add-comment.js",
+									"metadata": {
+										"childId": 0,
+										"size": 2048,
+										"created": "2024-11-17T12:00:00Z",
+										"lastModified": "2024-11-17T12:00:00Z"
+									},
+									"content": {
+										"dir_tree": {},
+										"html_content": {
+											"custom_html_present": false,
+											"htmlPath": "/root/src/api/add-comment.js"
+										},
+										"threejs_scene": {
+											"images": [],
+											"tags": {
+												"stack_tag": [],
+												"comment_tag": []
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

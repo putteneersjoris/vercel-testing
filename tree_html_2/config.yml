@@ -1,0 +1,138 @@
+# File Configuration > initial parms
+info:
+  version: "alpha"
+
+files:
+  filename: "filestructure.json"
+  max_depth: 5
+  allowed_extensions:
+    - jpg
+    - png
+    - gif
+    - txt
+    - sh
+    - py
+    - obj
+    - html 
+    - js 
+    - json 
+    - yml 
+  ignore_patterns:
+    - "_*"
+    - ".*"
+  text_files_to_images: true
+  folder_names_to_images: true
+
+# Display Settings > initial parms
+display:
+  sort:
+    - date
+    - size
+    - user
+  mobile:
+    switch_to_mobile_when: "50%"
+    show_dir_tree: true
+    show_html_content: true
+    show_theejs_scene: true
+
+# Path Configuration  > initial parms
+paths:
+  config: "config.yml"
+  root: "./"
+  logs: "logs"
+
+# Media Settings  > initial parms
+media:
+  image_quality: 85
+  html_content:
+    dimensions:
+      desktop: [800, 600]
+      mobile: [800, 600]
+    paths:
+      desktop_path: "processed"
+      mobile_path: "processed"
+  threejs_scene:
+    dimensions:
+      desktop: [800, 600]
+      mobile: [800, 600]
+    paths:
+      desktop_path: "processed"
+      mobile_path: "processed"
+
+# Directory Tree Configuration  > initial parms
+dir_tree: {}
+
+# HTML Content Configuration > initial parms
+html_content: {}
+
+# Three.js Scene Configuration > initial parms
+threejs_scene:
+  appearance:
+    transparency_color: "black"
+  render:
+    show_foldernames_as_images: true
+    show_textfils_as_images: true
+    show_comment_tags: true
+    show_stack_tags: true
+  performance:
+    max_instances: 1000
+    grid_size: 10
+    spacing: 0
+
+
+#./
+#│
+#├── .git/
+#├── .github/
+#│   └── workflows/
+#│       ├── build.yml
+#│       └── deploy.yml
+#│
+#├── .gitignore
+#├── src/
+#│   ├── scripts/
+#│   │   ├── py/
+#│   │   │   ├── gen_header.py
+#│   │   │   ├── gen_content.py
+#│   │   │   ├── gen_structure.py
+#│   │   │   ├── img_resize.py
+#│   │   │   ├── img_grid.py
+#│   │   │   ├── img_text.py
+#│   │   │   ├── tree_builder.py
+#│   │   │   ├── utils_files.py
+#│   │   │   ├── utils_validate.py
+#│   │   │   └── main.py
+#│   │   │
+#│   │   ├── js/
+#│   │   │   ├── main.js
+#│   │   │   ├── grid.js
+#│   │   │   └── image-loader.js
+#│   │   │
+#│   │   ├── styles/
+#│   │   │   ├── main.css
+#│   │   │   └── grid.css
+#│   │   │
+#│   │   ├── logs/
+#│   │   │   ├── generator.log
+#│   │   │   └── errors.log
+#│   │   │
+#│   │   ├── data.json
+#│   │   ├── settings.yml
+#│   │   └── index.html
+#│   │
+#│   └── archigrad.io/
+#│       ├── project_1/
+#│       ├── project_2/
+#│       ├── project_3/
+#│       └── project_4/
+#│
+#└── README.md
+#
+#
+#
+#
+#
+#
+#
+#
+

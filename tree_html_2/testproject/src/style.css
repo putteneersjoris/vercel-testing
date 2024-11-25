@@ -1,0 +1,455 @@
+:root {
+  --font-size: 14px; 
+  --header-height: 10%;
+  --bg-color: rgb(240,240,240);
+  --font: url('./extra/font/Roboto-Black.ttf');
+
+}
+
+@font-face{
+	font-family: 'Roboto Medium';
+	src: url('./extra/font/Roboto-Medium.ttf') format('truetype');
+}
+@font-face{
+	font-family: 'Roboto Light';
+	src: url('./extra/font/Roboto-Light.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Roboto Black';
+	src: url('./extra/font/Roboto-Black.ttf') format('truetype');
+}
+
+@font-face{
+	font-family: 'Roboto MediumItalic';
+	src: url('./extra/font/Roboto-MediumItalic.ttf') format('truetype');
+}
+
+
+
+body, html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	background-color: var(--bg-color);
+	font-family: 'Roboto Medium', sans-serif;
+	overflow-x: hidden;
+}
+
+
+#header {
+	float:left;
+	width: 75%;
+}
+
+#title {
+	overflow: hidden; 
+	display: flex;
+	font-family: 'Roboto Black', sans-serif;
+
+}
+
+#title h1 {
+	margin-top: 50px;
+	margin-bottom: 20px;
+  font-size:32px
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+#title h1:hover {
+    text-decoration: underline;
+}
+
+#titlePage h1 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#all{
+text-decoration: underline;
+cursor:pointer;
+font-size: 20px;
+}
+
+
+.containerStatic {
+ display: grid;
+    grid-template-columns: auto 1fr; /* First column auto-sized, second column takes up remaining space */
+    align-items: start; /* Align items at the start of the grid */
+
+}
+
+.menuprevnext {
+    float: left; /* Float the menuprevnext div to the left */
+}
+
+#tagStatic {
+    float: right; /* Float the tagStatic span to the right */
+    color: rgb(255, 0, 0);
+text-align:right;
+}
+
+
+#contentPage {
+	height: calc(90% - var(--font-size));
+  width: 100%;
+  display: flex;
+  justify-content: center
+}
+
+#textPage  {
+	font-size:var(--font-size);
+  margin-right: 90px;
+  flex: 50%;
+  /*padding-left: var(--font-size);*/
+
+}
+
+#textPage h1{
+	margin-top:0px;
+}
+
+
+
+#imagePage {
+  /*margin-top:30px;*/
+  flex: 60%;
+ 
+
+}
+
+#imagePage img{
+  width: 32.9%;
+  object-fit: cover;
+
+/*
+  width: 32.5%;
+  height: 50.5%;
+  object-fit: cover; */
+}
+
+.imagesPage{
+  /* box-shadow: -1px 3px 50px 3px rgba(0, 0, 0, 0.6);*/
+  object-fit: cover;
+	cursor: pointer;
+  /* transition: all 1s ease; */
+}
+
+.imagePageFull{
+
+}
+
+
+.backButtonPage{
+  color: blue;
+  /* font-size: 18px; */
+}
+
+.backButtonPage:hover{
+   text-decoration: none; 
+
+}
+
+#tags-wrapper span{
+	overflow:hidden;
+}
+
+#tags-wrapper {
+	font-size: var(--font-size);
+	margin-top: 198px;
+	margin-left: 30px;
+	width:15%;
+	float:left;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.selected {
+  text-decoration: underline;
+  /*animation: fadeIn 1s ease-in-out;*/
+}
+
+
+
+
+#tags-wrapper span { padding-right: 30px;}
+
+#bar {
+	width: 100%;
+	overflow: hidden;
+	padding-top: var(--font-size);
+  	padding-bottom: 50px;
+	y: 'Roboto MediumItalic', sans-serif;
+}
+
+#bar #barContent {
+  margin: 0;
+  white-space: nowrap;
+  animation: scrollLeft 50s linear infinite;
+  padding-left: 100%;
+  
+}
+
+#bar #barContent a{
+	cursor: pointer;
+	/*color: rgb(0, 4, 255);*/
+	color: black;
+	font-size: var(--font-size);
+
+}
+
+
+
+#bar #barContent a:hover{
+
+color:blue;
+	
+}
+
+
+
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+
+#content {
+  background-color: var(--bg-color);
+  height: 90%;
+  width: 100%;
+  /* box-shadow: inset 0px -1px 0px 0px #000000;  */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#projects {
+  height: calc(80% - 100px);
+  width: 100%;
+line-height:0px;
+}
+
+.project{
+line-height:18px;
+border:10px solid rgba(0,0,0,0);  
+position: relative;
+  margin: 0px ;
+  display: inline-block;
+}
+
+
+.project img{
+  position: absolute;
+  /*border: black 1px solid;*/
+  margin-left: 0px;
+  object-fit:cover;
+
+}
+
+
+
+
+.project:hover img {
+    opacity: 0.6;
+}
+
+.project:hover .projectName {
+    text-decoration: underline;
+}
+
+
+
+
+.filter{
+	cursor:pointer;
+}
+.filter:hover {
+	text-decoration: underline;    
+	color: blue;
+    }
+
+
+#projectPage{
+  color: black; text-decoration: none;
+}
+
+.endImg{
+  cursor: pointer;
+}
+
+.projectName{
+  border-radius: var(--border-radius) 0px 0px 0px;
+  position: absolute;
+  padding-left: 20px; 
+   padding-bottom: 40px;
+	padding-top: 20px;  
+  color: rgb(0, 0, 0); 
+  max-height: 10%; 
+  font-size: 18px;
+  overflow: hidden;
+
+text-overflow: ellipsis;
+  width: calc(100% - 20px); 
+}
+
+
+.projectName:hover{
+	text-decoration:underline;
+}
+
+
+.projectDate{
+  position: absolute;
+  margin-left: 0px;
+	top: calc(100% -20px);
+	right:20px;
+	bottom: 20px;
+	color: rgb(0, 0, 0); 
+	font-size: 12px;
+	padding-left: 3px;
+	padding-right: 3px;
+ }
+
+
+
+.projectTags{
+	position: absolute;
+	font-size: var(--font-size);
+	bottom:0px;  
+	margin:20px;
+	color: rgba(0,0,0,1);
+background-color:rgba(240,240,240,0.1);
+    backdrop-filter: blur(10px);
+
+	font-size: 12px;
+	padding-left: 3px;
+	padding-right: 3px;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.hidden-style {
+  text-decoration: line-through;
+}
+
+
+
+#footer {
+  z-index: 100;
+	font-size:var(--font-size);
+  position:fixed;
+  bottom: var(--font-size);
+  left: 10px;
+  padding-bottom: 3px;
+  margin-left: var(--font-size);
+
+}
+
+
+@media (max-width: 1000px) {
+ :root {
+    --font-size: 12px; /* Adjust this value as needed */
+
+  }
+
+#tags-wrapper span{
+display:none;
+}
+#tags-wrapper{
+width:7%;
+}
+
+.projectNames{
+display: none;
+
+}
+
+.projectDate{
+display: none;
+
+}
+
+.projectTags{
+display: none;
+
+}
+
+#textPage{
+width:100%;
+margin:10px
+}
+
+#footer {
+display:none;
+}
+
+
+#contentPage {
+  width: 100%;
+  display: inline;
+  justify-content: center
+}
+
+<style>
+    .line {
+        position: absolute;
+        background-color: black;
+        pointer-events: none; /* Ensure the line doesn't interfere with mouse events */
+    }
+</style>
+
+@media (min-width: 0px) and (max-width: 500px) {
+    :root {
+        --font-size: 10px; /* Adjust this value as needed */
+    }
+    
+    #tags-wrapper span {
+        display: none;
+    }
+    
+    #tags-wrapper {
+        width: 7%;
+    }
+    
+    .projectNames {
+        display: none;
+    }
+    
+    .projectDate {
+        display: none;
+    }
+    
+    .projectTags {
+        display: none;
+    }
+    
+    #textPage {
+        width: 100%;
+        margin: 10px;
+    }
+    
+    #footer {
+        display: none;
+    }
+    
+    #contentPage {
+        width: 100%;
+        display: inline;
+        justify-content: center;
+    }
+}
+
