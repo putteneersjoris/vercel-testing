@@ -51,18 +51,18 @@ media:
   image_quality: 85
   html_content:
     dimensions:
-      desktop: [800, 600]
-      mobile: [800, 600]
+      desktop: [512, 512]
+      mobile: [256, 256]
     paths:
-      desktop_path: "processed"
-      mobile_path: "processed"
+      desktop_path: "./.hc_d_" 
+      mobile_path: "./.hc_m_"
   threejs_scene:
     dimensions:
-      desktop: [800, 600]
-      mobile: [800, 600]
+      desktop: [1024,1024]
+      mobile: [256,256]
     paths:
-      desktop_path: "processed"
-      mobile_path: "processed"
+      desktop_path: "./.ts_d_"
+      mobile_path: "./.ts_m_"
 
 dir_tree: {}
 html_content: {}
